@@ -219,19 +219,24 @@ tbody tr:last-child td{border-bottom:none}
 .eco-title{font-family:var(--font-head);font-size:clamp(28px,5vw,48px);font-weight:800;color:var(--white);line-height:1.15;letter-spacing:-.02em;margin-bottom:20px}
 .eco-highlight{display:inline;background:var(--red);padding:2px 8px;color:var(--white)}
 .eco-desc{font-size:17px;color:var(--gray);line-height:1.7;max-width:400px}
-.eco-rings{position:relative;width:100%;aspect-ratio:1;max-width:480px;margin:0 auto}
+.eco-rings{position:relative;width:100%;aspect-ratio:1;max-width:420px;margin:0 auto}
 .eco-ring{position:absolute;border-radius:50%;border:1px solid rgba(204,0,0,.2);display:flex;align-items:center;justify-content:center}
-.eco-ring-outer{inset:0;border-color:rgba(204,0,0,.12);background:radial-gradient(circle,transparent 60%,rgba(204,0,0,.03))}
-.eco-ring-3{inset:12%;border-color:rgba(204,0,0,.18);background:rgba(204,0,0,.02)}
-.eco-ring-2{inset:24%;border-color:rgba(204,0,0,.25);background:rgba(204,0,0,.03)}
-.eco-ring-1{inset:36%;border-color:rgba(204,0,0,.35);background:rgba(204,0,0,.05)}
-.eco-center{width:60px;height:60px;border-radius:50%;background:var(--red);display:flex;align-items:center;justify-content:center;box-shadow:0 0 30px rgba(204,0,0,.4)}
-.eco-ring-label{position:absolute;font-family:var(--font-head);font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--gray);white-space:nowrap}
-.eco-ring-label-bottom{bottom:8%;left:50%;transform:translateX(-50%)}
+.eco-ring-outer{inset:0;border-color:rgba(204,0,0,.12)}
+.eco-ring-3{inset:16%;border-color:rgba(204,0,0,.18)}
+.eco-ring-2{inset:32%;border-color:rgba(204,0,0,.28)}
+.eco-ring-1{inset:48%;border-color:rgba(204,0,0,.4);background:rgba(204,0,0,.04)}
+.eco-center{width:72px;height:72px;border-radius:50%;background:var(--red);display:flex;align-items:center;justify-content:center;box-shadow:0 0 40px rgba(204,0,0,.5),0 0 80px rgba(204,0,0,.2);position:relative;z-index:2}
+.eco-ring-label{position:absolute;font-family:var(--font-head);font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--gray);white-space:nowrap;left:50%;transform:translateX(-50%)}
+.eco-ring-outer .eco-ring-label{bottom:6%}
+.eco-ring-3 .eco-ring-label{bottom:8%}
+.eco-ring-2 .eco-ring-label{bottom:10%}
+.eco-ring-1 .eco-ring-label{bottom:12%}
 @media(max-width:768px){
   .eco-layout{grid-template-columns:1fr;text-align:center}
   .eco-desc{margin:0 auto}
-  .eco-rings{max-width:320px;margin-top:32px}
+  .eco-rings{max-width:300px;margin-top:32px}
+  .eco-ring-label{font-size:8px;letter-spacing:.08em}
+  .eco-center{width:60px;height:60px}
 }
 
 /* ========== PARTNERS CARD ========== */
@@ -567,18 +572,18 @@ tbody tr:last-child td{border-bottom:none}
       <!-- Right: concentric rings -->
       <div class="eco-rings reveal-scale">
         <div class="eco-ring eco-ring-outer">
-          <span class="eco-ring-label eco-ring-label-bottom">+235 ESCRITÓRIOS FRANQUEADOS</span>
+          <span class="eco-ring-label">+235 Escritórios Franqueados</span>
         </div>
         <div class="eco-ring eco-ring-3">
-          <span class="eco-ring-label eco-ring-label-bottom">GRUPO DREAMERS</span>
+          <span class="eco-ring-label">Grupo Dreamers</span>
         </div>
         <div class="eco-ring eco-ring-2">
-          <span class="eco-ring-label eco-ring-label-bottom">CONSELHEIROS</span>
+          <span class="eco-ring-label">Conselheiros</span>
         </div>
         <div class="eco-ring eco-ring-1">
-          <span class="eco-ring-label eco-ring-label-bottom">CLIENTES</span>
+          <span class="eco-ring-label">Clientes</span>
           <div class="eco-center">
-            <span style="font-family:var(--font-head);font-size:28px;font-weight:800;color:var(--white)">V4</span>
+            <span style="font-family:var(--font-head);font-size:24px;font-weight:800;color:var(--white);letter-spacing:.02em">V4</span>
           </div>
         </div>
       </div>
