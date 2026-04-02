@@ -326,7 +326,7 @@ tbody tr:last-child td{border-bottom:none}
   .hamburger{position:absolute;right:16px;top:50%;transform:translateY(-50%);order:0}
   section{padding:48px 0}
   .hero{min-height:auto;padding:100px 20px 48px}
-  .hero-stats{grid-template-columns:repeat(2,1fr)}
+  .hero-stats{grid-template-columns:repeat(4,1fr);gap:12px;margin-top:24px}
   .container{padding:0 16px}
   .hero-float{display:none!important}
   .dots-pattern{display:none}
@@ -334,7 +334,10 @@ tbody tr:last-child td{border-bottom:none}
   .grid-3{grid-template-columns:repeat(2,1fr)}
 }
 @media(max-width:480px){
-  .hero-stats{grid-template-columns:1fr}
+  .hero-stats{grid-template-columns:repeat(2,1fr);gap:10px;margin-top:20px}
+  .hero-stat{padding:14px 8px}
+  .hero-stat .num{font-size:22px}
+  .hero-sub{margin-bottom:16px}
   .hero h1{font-size:28px}
   .nav-inner{min-height:60px;padding:0 16px}
   .brand-logo-v4{height:28px}
