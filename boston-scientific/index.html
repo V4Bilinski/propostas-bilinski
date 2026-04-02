@@ -1111,36 +1111,59 @@ tbody tr:last-child td{border-bottom:none}
 <hr class="section-divider">
 
 <!-- OFFER -->
-<section style="padding:64px 0">
-  <div class="container reveal" style="max-width:560px">
-    <div style="border:1.5px solid rgba(204,0,0,.4);border-radius:16px;background:rgba(204,0,0,.04);padding:48px 32px;text-align:center;position:relative;overflow:hidden">
-      <div style="position:absolute;top:0;left:50%;transform:translateX(-50%);background:var(--red);color:#fff;font-size:11px;font-weight:700;letter-spacing:.1em;padding:6px 24px;border-radius:0 0 8px 8px;text-transform:uppercase">Investimento</div>
-      <div style="margin-top:16px;margin-bottom:8px">
-        <span style="font-family:var(--font-head);font-size:14px;color:var(--gray);text-transform:uppercase;letter-spacing:.08em">Diagnóstico e Performance Comercial 360°</span>
+<style>
+@keyframes offer-glow{0%,100%{box-shadow:0 0 20px rgba(204,0,0,.15),0 0 60px rgba(204,0,0,.05)}50%{box-shadow:0 0 30px rgba(204,0,0,.25),0 0 80px rgba(204,0,0,.1)}}
+@keyframes offer-border{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+@keyframes price-in{from{opacity:0;transform:scale(.8) translateY(10px)}to{opacity:1;transform:scale(1) translateY(0)}}
+@keyframes check-in{from{opacity:0;transform:translateX(-12px)}to{opacity:1;transform:translateX(0)}}
+.offer-card{position:relative;border-radius:20px;padding:3px;background:linear-gradient(135deg,rgba(204,0,0,.6),rgba(204,0,0,.1),rgba(204,0,0,.4),rgba(204,0,0,.1));background-size:300% 300%;animation:offer-border 6s ease infinite,offer-glow 4s ease-in-out infinite}
+.offer-inner{border-radius:18px;background:linear-gradient(180deg,rgba(20,10,10,.95) 0%,rgba(12,6,6,.98) 100%);padding:52px 36px 40px;text-align:center;position:relative;overflow:hidden}
+.offer-inner::before{content:'';position:absolute;top:-60%;left:-20%;width:140%;height:140%;background:radial-gradient(ellipse at center,rgba(204,0,0,.08) 0%,transparent 70%);pointer-events:none}
+.offer-badge{display:inline-block;background:var(--red);color:#fff;font-size:11px;font-weight:700;letter-spacing:.12em;padding:8px 28px;border-radius:50px;text-transform:uppercase;position:relative;z-index:1}
+.offer-price{font-family:var(--font-head);font-size:clamp(40px,6vw,56px);font-weight:800;color:#fff;letter-spacing:-.02em;position:relative;z-index:1}
+.offer-price.visible{animation:price-in .6s cubic-bezier(.16,1,.3,1) forwards}
+.offer-check{display:flex;align-items:center;gap:12px;font-size:14px;color:var(--gray-lt);padding:10px 0;border-bottom:1px solid rgba(255,255,255,.04)}
+.offer-check:last-child{border-bottom:none}
+.offer-check.visible{animation:check-in .4s ease forwards}
+.offer-check-icon{width:22px;height:22px;border-radius:50%;background:rgba(204,0,0,.15);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.offer-check-icon svg{width:12px;height:12px;stroke:var(--red);stroke-width:3;fill:none}
+.offer-cta{display:inline-block;background:var(--red);color:#fff;font-family:var(--font-head);font-size:15px;font-weight:700;padding:16px 52px;border-radius:12px;text-decoration:none;transition:all .3s ease;position:relative;z-index:1}
+.offer-cta:hover{background:var(--red-lt);transform:translateY(-2px);box-shadow:0 8px 24px rgba(204,0,0,.3)}
+</style>
+<section style="padding:80px 0">
+  <div class="container reveal" style="max-width:520px">
+    <div class="offer-card">
+      <div class="offer-inner">
+        <div style="margin-bottom:28px"><span class="offer-badge">Investimento</span></div>
+        <div style="margin-bottom:4px">
+          <span style="font-family:var(--font-head);font-size:13px;color:var(--gray);text-transform:uppercase;letter-spacing:.1em">Diagnóstico e Performance Comercial</span>
+        </div>
+        <div style="margin:20px 0 6px" class="offer-price">R$ 49.997</div>
+        <p style="font-size:13px;color:var(--gray);margin-bottom:36px;letter-spacing:.04em">pagamento único</p>
+        <div style="text-align:left;margin-bottom:36px;padding:0 8px">
+          <div class="offer-check" style="animation-delay:.1s">
+            <span class="offer-check-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+            Diagnóstico completo da operação comercial
+          </div>
+          <div class="offer-check" style="animation-delay:.2s">
+            <span class="offer-check-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+            Análise de processo, metas e time
+          </div>
+          <div class="offer-check" style="animation-delay:.3s">
+            <span class="offer-check-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+            Plano de ação validado em 5&nbsp;semanas
+          </div>
+          <div class="offer-check" style="animation-delay:.4s">
+            <span class="offer-check-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+            32 etapas com 5 especialistas
+          </div>
+          <div class="offer-check" style="animation-delay:.5s">
+            <span class="offer-check-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+            Treinamento do time comercial
+          </div>
+        </div>
+        <a href="https://wa.me/5511958326644" target="_blank" rel="noopener" class="offer-cta">Falar com a V4 Company</a>
       </div>
-      <div style="margin:24px 0 8px">
-        <span style="font-family:var(--font-head);font-size:clamp(36px,5vw,48px);font-weight:800;color:#fff;letter-spacing:-.02em">R$ 49.997</span>
-      </div>
-      <p style="font-size:13px;color:var(--gray);margin-bottom:32px">pagamento único</p>
-      <hr style="border:none;border-top:1px solid rgba(255,255,255,.08);margin:0 0 24px">
-      <ul style="list-style:none;padding:0;margin:0 0 32px;text-align:left;display:flex;flex-direction:column;gap:12px">
-        <li style="display:flex;align-items:center;gap:10px;font-size:14px;color:var(--gray-lt)">
-          <span style="color:var(--red);font-size:16px;flex-shrink:0">&#10003;</span> Diagnóstico completo da operação comercial
-        </li>
-        <li style="display:flex;align-items:center;gap:10px;font-size:14px;color:var(--gray-lt)">
-          <span style="color:var(--red);font-size:16px;flex-shrink:0">&#10003;</span> Análise de processo, metas e time
-        </li>
-        <li style="display:flex;align-items:center;gap:10px;font-size:14px;color:var(--gray-lt)">
-          <span style="color:var(--red);font-size:16px;flex-shrink:0">&#10003;</span> Plano de ação validado em 5&nbsp;semanas
-        </li>
-        <li style="display:flex;align-items:center;gap:10px;font-size:14px;color:var(--gray-lt)">
-          <span style="color:var(--red);font-size:16px;flex-shrink:0">&#10003;</span> 32 etapas com 5 especialistas
-        </li>
-        <li style="display:flex;align-items:center;gap:10px;font-size:14px;color:var(--gray-lt)">
-          <span style="color:var(--red);font-size:16px;flex-shrink:0">&#10003;</span> Treinamento do time comercial
-        </li>
-      </ul>
-      <div style="text-align:center"><a href="https://wa.me/5511958326644" target="_blank" rel="noopener" class="btn btn-primary" style="padding:14px 48px;font-size:15px;border-radius:8px">Falar com a V4 Company</a></div>
     </div>
   </div>
 </section>
