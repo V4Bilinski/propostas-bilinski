@@ -1,0 +1,40 @@
+{
+  "client": {
+    "name": "Boston Scientific",
+    "logo_url": "data:image/png;base64",
+    "primary_color": "#005DA6",
+    "primary_color_light": "#0073CF",
+    "primary_color_dark": "#004680",
+    "website": "https://www.bostonscientific.com",
+    "whatsapp": ""
+  },
+  "v4_unit": {
+    "name": "V4 Bilinski & Co",
+    "website": "https://v4bilinski.github.io/saas-contabil/",
+    "whatsapp_link": "https://wa.me/5511958326644"
+  },
+  "study": {
+    "title": "",
+    "subtitle": "",
+    "badge_text": "Proposta comercial 2025",
+    "meta_description": "",
+    "language": "pt-BR"
+  },
+  "hero_stats": [
+    { "value": "", "label": "" },
+    { "value": "", "label": "" },
+    { "value": "", "label": "" }
+  ],
+  "phase_a": {
+    "enabled": true,
+    "sections": ["stats", "clients", "advisors", "ecosystem", "mission", "method"]
+  },
+  "phase_b": {
+    "enabled": true,
+    "product": "Diagnóstico e Performance Comercial 360°"
+  },
+  "phase_c": {
+    "enabled": false,
+    "sections": {}
+  }
+}
