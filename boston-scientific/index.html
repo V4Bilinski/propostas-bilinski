@@ -610,55 +610,7 @@ tbody tr:last-child td{border-bottom:none}
       </div>
       <!-- Right: Brazil map -->
       <div class="eco-map reveal-scale">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 530" width="420" height="445" role="img" aria-label="Mapa do Brasil com mais de 256 escritórios V4 Company espalhados pelo país">
-          <title>Mapa do Brasil - Escritórios V4 Company</title>
-          <defs>
-            <linearGradient id="mapGrad" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0%" stop-color="#e0e0e0"/>
-              <stop offset="50%" stop-color="#c8c8c8"/>
-              <stop offset="100%" stop-color="#a0a0a0"/>
-            </linearGradient>
-            <filter id="mapShadow"><feDropShadow dx="3" dy="5" stdDeviation="8" flood-color="#000" flood-opacity=".3"/></filter>
-          </defs>
-          <!-- Brazil silhouette (simplified geo path) -->
-          <path fill="url(#mapGrad)" filter="url(#mapShadow)" d="M290,18 C305,16 322,22 338,30 C354,38 368,50 380,64 C390,76 396,90 406,104 C414,116 424,126 430,140 C436,154 436,170 438,186 C440,200 444,214 444,230 C444,246 438,262 436,278 C434,290 436,302 432,314 C428,328 418,340 412,352 C406,364 402,378 394,388 C386,398 374,404 366,414 C358,424 354,436 344,444 C334,452 320,456 310,464 C298,472 288,484 276,488 C264,492 250,490 238,492 C224,494 210,500 196,498 C184,496 174,488 162,482 C150,476 136,472 126,464 C118,458 114,448 108,438 C102,428 94,420 90,408 C86,398 88,386 84,376 C80,364 72,354 68,342 C64,328 64,312 60,298 C56,286 48,276 44,264 C40,252 38,238 36,224 C36,212 40,200 40,188 C40,174 36,160 36,146 C36,134 42,122 46,110 C50,98 54,86 62,76 C70,66 82,58 92,50 C102,42 114,38 126,32 C138,26 152,22 166,20 C178,18 190,20 202,18 C214,16 226,10 240,10 C254,10 268,14 280,16Z"/>
-          <!-- Map pins (256+ offices) -->
-          <g fill="#CC0000" aria-hidden="true">
-            <!-- Norte -->
-            <circle cx="200" cy="80" r="6"/><circle cx="220" cy="95" r="6"/><circle cx="175" cy="110" r="6"/>
-            <circle cx="240" cy="75" r="6"/><circle cx="155" cy="90" r="6"/><circle cx="190" cy="105" r="6"/>
-            <!-- Nordeste -->
-            <circle cx="370" cy="100" r="6"/><circle cx="385" cy="120" r="6"/><circle cx="395" cy="140" r="6"/>
-            <circle cx="400" cy="165" r="6"/><circle cx="405" cy="190" r="6"/><circle cx="395" cy="210" r="6"/>
-            <circle cx="380" cy="228" r="6"/><circle cx="365" cy="245" r="6"/><circle cx="350" cy="110" r="6"/>
-            <circle cx="360" cy="135" r="6"/><circle cx="375" cy="155" r="6"/><circle cx="390" cy="175" r="6"/>
-            <circle cx="345" cy="258" r="6"/><circle cx="410" cy="150" r="6"/><circle cx="398" cy="198" r="6"/>
-            <!-- Centro-Oeste -->
-            <circle cx="260" cy="240" r="6"/><circle cx="280" cy="260" r="6"/><circle cx="250" cy="270" r="6"/>
-            <circle cx="270" cy="285" r="6"/><circle cx="240" cy="255" r="6"/><circle cx="295" cy="250" r="6"/>
-            <circle cx="230" cy="230" r="6"/><circle cx="275" cy="230" r="6"/>
-            <!-- Sudeste (maior concentracao) -->
-            <circle cx="320" cy="310" r="6"/><circle cx="335" cy="325" r="6"/><circle cx="350" cy="315" r="6"/>
-            <circle cx="310" cy="330" r="6"/><circle cx="340" cy="340" r="6"/><circle cx="325" cy="350" r="6"/>
-            <circle cx="355" cy="335" r="6"/><circle cx="305" cy="315" r="6"/><circle cx="360" cy="305" r="6"/>
-            <circle cx="345" cy="295" r="6"/><circle cx="330" cy="285" r="6"/><circle cx="315" cy="295" r="6"/>
-            <circle cx="298" cy="340" r="6"/><circle cx="370" cy="320" r="6"/><circle cx="365" cy="345" r="6"/>
-            <circle cx="312" cy="360" r="6"/>
-            <!-- Sul -->
-            <circle cx="290" cy="380" r="6"/><circle cx="275" cy="395" r="6"/><circle cx="260" cy="410" r="6"/>
-            <circle cx="245" cy="425" r="6"/><circle cx="230" cy="440" r="6"/><circle cx="285" cy="400" r="6"/>
-            <circle cx="270" cy="418" r="6"/><circle cx="255" cy="435" r="6"/><circle cx="300" cy="370" r="6"/>
-            <circle cx="240" cy="450" r="6"/>
-          </g>
-          <!-- Pin highlights -->
-          <g fill="#fff" opacity=".3" aria-hidden="true">
-            <circle cx="200" cy="78" r="2"/><circle cx="370" cy="98" r="2"/><circle cx="395" cy="138" r="2"/>
-            <circle cx="260" cy="238" r="2"/><circle cx="320" cy="308" r="2"/><circle cx="335" cy="323" r="2"/>
-            <circle cx="350" cy="313" r="2"/><circle cx="290" cy="378" r="2"/><circle cx="275" cy="393" r="2"/>
-            <circle cx="340" cy="338" r="2"/><circle cx="405" cy="188" r="2"/><circle cx="380" cy="226" r="2"/>
-            <circle cx="310" cy="328" r="2"/><circle cx="345" cy="293" r="2"/><circle cx="230" cy="438" r="2"/>
-          </g>
-        </svg>
+        <img src="mapa-brasil-v4.png" alt="Mapa do Brasil dividido por estados com mais de 256 escritórios V4 Company marcados com pins vermelhos" width="480" height="480" loading="lazy">
       </div>
     </div>
 
