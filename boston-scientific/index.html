@@ -217,21 +217,24 @@ tbody tr:last-child td{border-bottom:none}
 .eco-layout{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;min-height:500px}
 .eco-text{position:relative;z-index:2}
 .eco-title{font-family:var(--font-head);font-size:clamp(28px,5vw,48px);font-weight:800;color:var(--white);line-height:1.3;letter-spacing:-.02em;margin-bottom:20px}
-.eco-highlight{display:inline;background:var(--red);padding:2px 8px;color:var(--white);position:relative;z-index:-1}
 .eco-desc{font-size:17px;color:var(--gray);line-height:1.7;max-width:520px}
-.eco-stats{display:grid;grid-template-columns:1fr 1fr;gap:32px 48px;margin-top:36px}
-.eco-stat-item{display:flex;flex-direction:column;gap:2px}
-.eco-stat-prefix{font-size:13px;color:var(--gray);font-weight:400}
-.eco-stat-value{display:flex;align-items:center;gap:6px;font-family:var(--font-head);font-size:clamp(36px,4vw,54px);font-weight:800;color:var(--white);line-height:1.1}
-.eco-stat-arrow{color:var(--red);font-size:28px;line-height:1}
-.eco-stat-label{font-size:14px;color:var(--gray);font-weight:500;margin-top:2px}
+.eco-stats{display:grid;grid-template-columns:1fr 1fr;gap:28px 40px;margin-top:36px}
+.eco-stat-item{display:flex;flex-direction:column;gap:4px}
+.eco-stat-prefix{font-size:14px;color:var(--gray);font-weight:400}
+.eco-stat-value{display:flex;align-items:center;gap:6px;font-family:var(--font-head);font-size:clamp(32px,4vw,52px);font-weight:800;color:var(--white);line-height:1.1}
+.eco-stat-arrow{color:var(--red);font-size:24px;line-height:1}
+.eco-stat-label{font-size:15px;color:var(--gray);font-weight:500;margin-top:2px}
 .eco-map{position:relative;display:flex;align-items:center;justify-content:center}
-.eco-map img,.eco-map svg{max-width:100%;height:auto;filter:drop-shadow(0 4px 24px rgba(0,0,0,.3))}
+.eco-map svg{max-width:100%;height:auto;filter:drop-shadow(0 4px 24px rgba(0,0,0,.3))}
 @media(max-width:768px){
   .eco-layout{grid-template-columns:1fr;text-align:center}
   .eco-desc{margin:0 auto}
-  .eco-stats{margin:32px auto 0;max-width:400px}
+  .eco-stats{margin:32px auto 0;max-width:400px;gap:24px 32px}
+  .eco-stat-value{justify-content:center}
   .eco-map{margin-top:40px}
+}
+@media(prefers-reduced-motion:reduce){
+  .reveal,.reveal-scale{opacity:1!important;transform:none!important;transition:none!important}
 }
 
 /* ========== PARTNERS CARD ========== */
@@ -588,53 +591,53 @@ tbody tr:last-child td{border-bottom:none}
       </div>
       <!-- Right: Brazil map -->
       <div class="eco-map reveal-scale">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 530" width="420" height="445">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 530" width="420" height="445" role="img" aria-label="Mapa do Brasil com mais de 256 escritórios V4 Company espalhados pelo país">
+          <title>Mapa do Brasil - Escritórios V4 Company</title>
           <defs>
             <linearGradient id="mapGrad" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0%" stop-color="#e8e8e8"/>
-              <stop offset="100%" stop-color="#b0b0b0"/>
+              <stop offset="0%" stop-color="#e0e0e0"/>
+              <stop offset="50%" stop-color="#c8c8c8"/>
+              <stop offset="100%" stop-color="#a0a0a0"/>
             </linearGradient>
-            <filter id="mapShadow"><feDropShadow dx="2" dy="4" stdDeviation="6" flood-color="#000" flood-opacity=".25"/></filter>
+            <filter id="mapShadow"><feDropShadow dx="3" dy="5" stdDeviation="8" flood-color="#000" flood-opacity=".3"/></filter>
           </defs>
-          <!-- Brazil silhouette -->
-          <path fill="url(#mapGrad)" filter="url(#mapShadow)" d="M267,10c15,2 32,5 48,12c18,8 30,18 45,28c12,8 28,15 38,28c8,10 10,22 18,32c6,8 16,14 20,24c5,12 2,26 5,39c3,10 10,18 12,29c2,10-2,20 0,30c2,12 10,22 14,33c5,14 5,30 12,43c6,10 16,18 22,28c8,14 12,30 22,42c8,10 20,16 26,28c5,10 4,22 8,33c4,10 12,18 16,28c3,8 2,18 5,26c4,10 14,17 15,28c1,8-5,16-4,24c1,10 8,18 6,28c-2,8-10,14-14,22c-5,10-6,22-14,30c-8,8-20,10-30,16c-12,8-22,18-36,22c-10,3-22,0-32,4c-12,5-22,14-35,16c-10,2-20-2-30,0c-12,3-22,10-34,10c-10,0-20-6-30-6c-12,0-24,4-35,2c-10-2-18-10-28-14c-12-5-26-6-36-14c-8-6-12-16-20-24c-6-8-16-14-20-24c-3-8 0-18-2-26c-2-10-8-20-8-30c0-8 6-16 6-24c0-10-6-20-8-30c-2-12 2-24-2-36c-3-10-10-18-14-28c-5-12-8-26-10-39c-1-10 2-20 0-30c-2-12-8-24-8-36c0-10 6-20 8-30c2-12 0-24 4-36c4-10 12-18 18-26c8-10 14-22 24-30c8-6 20-8 30-12c12-5 24-12 38-14c12-2 24,2 36,0c10-2 20-8 30-10c12-2 24,0 36-2z"/>
-          <!-- Map pins -->
-          <g fill="#CC0000">
-            <circle cx="350" cy="95" r="7"/><circle cx="370" cy="110" r="7"/><circle cx="385" cy="130" r="7"/>
-            <circle cx="395" cy="155" r="7"/><circle cx="400" cy="180" r="7"/><circle cx="390" cy="205" r="7"/>
-            <circle cx="375" cy="225" r="7"/><circle cx="360" cy="245" r="7"/><circle cx="340" cy="260" r="7"/>
-            <circle cx="320" cy="275" r="7"/><circle cx="345" cy="280" r="7"/><circle cx="370" cy="265" r="7"/>
-            <circle cx="310" cy="130" r="7"/><circle cx="330" cy="140" r="7"/><circle cx="295" cy="155" r="7"/>
-            <circle cx="275" cy="170" r="7"/><circle cx="260" cy="190" r="7"/><circle cx="250" cy="215" r="7"/>
-            <circle cx="245" cy="245" r="7"/><circle cx="255" cy="270" r="7"/><circle cx="270" cy="290" r="7"/>
-            <circle cx="290" cy="305" r="7"/><circle cx="310" cy="315" r="7"/><circle cx="325" cy="330" r="7"/>
-            <circle cx="310" cy="350" r="7"/><circle cx="290" cy="365" r="7"/><circle cx="270" cy="380" r="7"/>
-            <circle cx="250" cy="395" r="7"/><circle cx="235" cy="415" r="7"/><circle cx="225" cy="440" r="7"/>
-            <circle cx="200" cy="260" r="7"/><circle cx="185" cy="240" r="7"/><circle cx="170" cy="220" r="7"/>
-            <circle cx="160" cy="195" r="7"/><circle cx="155" cy="170" r="7"/><circle cx="165" cy="145" r="7"/>
-            <circle cx="195" cy="130" r="7"/><circle cx="220" cy="120" r="7"/><circle cx="245" cy="110" r="7"/>
-            <circle cx="230" cy="330" r="7"/><circle cx="215" cy="310" r="7"/><circle cx="200" cy="290" r="7"/>
-            <circle cx="300" cy="200" r="7"/><circle cx="320" cy="185" r="7"/><circle cx="335" cy="170" r="7"/>
-            <circle cx="280" cy="340" r="7"/><circle cx="260" cy="355" r="7"/><circle cx="340" cy="305" r="7"/>
+          <!-- Brazil silhouette (simplified geo path) -->
+          <path fill="url(#mapGrad)" filter="url(#mapShadow)" d="M290,18 C305,16 322,22 338,30 C354,38 368,50 380,64 C390,76 396,90 406,104 C414,116 424,126 430,140 C436,154 436,170 438,186 C440,200 444,214 444,230 C444,246 438,262 436,278 C434,290 436,302 432,314 C428,328 418,340 412,352 C406,364 402,378 394,388 C386,398 374,404 366,414 C358,424 354,436 344,444 C334,452 320,456 310,464 C298,472 288,484 276,488 C264,492 250,490 238,492 C224,494 210,500 196,498 C184,496 174,488 162,482 C150,476 136,472 126,464 C118,458 114,448 108,438 C102,428 94,420 90,408 C86,398 88,386 84,376 C80,364 72,354 68,342 C64,328 64,312 60,298 C56,286 48,276 44,264 C40,252 38,238 36,224 C36,212 40,200 40,188 C40,174 36,160 36,146 C36,134 42,122 46,110 C50,98 54,86 62,76 C70,66 82,58 92,50 C102,42 114,38 126,32 C138,26 152,22 166,20 C178,18 190,20 202,18 C214,16 226,10 240,10 C254,10 268,14 280,16Z"/>
+          <!-- Map pins (256+ offices) -->
+          <g fill="#CC0000" aria-hidden="true">
+            <!-- Norte -->
+            <circle cx="200" cy="80" r="6"/><circle cx="220" cy="95" r="6"/><circle cx="175" cy="110" r="6"/>
+            <circle cx="240" cy="75" r="6"/><circle cx="155" cy="90" r="6"/><circle cx="190" cy="105" r="6"/>
+            <!-- Nordeste -->
+            <circle cx="370" cy="100" r="6"/><circle cx="385" cy="120" r="6"/><circle cx="395" cy="140" r="6"/>
+            <circle cx="400" cy="165" r="6"/><circle cx="405" cy="190" r="6"/><circle cx="395" cy="210" r="6"/>
+            <circle cx="380" cy="228" r="6"/><circle cx="365" cy="245" r="6"/><circle cx="350" cy="110" r="6"/>
+            <circle cx="360" cy="135" r="6"/><circle cx="375" cy="155" r="6"/><circle cx="390" cy="175" r="6"/>
+            <circle cx="345" cy="258" r="6"/><circle cx="410" cy="150" r="6"/><circle cx="398" cy="198" r="6"/>
+            <!-- Centro-Oeste -->
+            <circle cx="260" cy="240" r="6"/><circle cx="280" cy="260" r="6"/><circle cx="250" cy="270" r="6"/>
+            <circle cx="270" cy="285" r="6"/><circle cx="240" cy="255" r="6"/><circle cx="295" cy="250" r="6"/>
+            <circle cx="230" cy="230" r="6"/><circle cx="275" cy="230" r="6"/>
+            <!-- Sudeste (maior concentracao) -->
+            <circle cx="320" cy="310" r="6"/><circle cx="335" cy="325" r="6"/><circle cx="350" cy="315" r="6"/>
+            <circle cx="310" cy="330" r="6"/><circle cx="340" cy="340" r="6"/><circle cx="325" cy="350" r="6"/>
+            <circle cx="355" cy="335" r="6"/><circle cx="305" cy="315" r="6"/><circle cx="360" cy="305" r="6"/>
+            <circle cx="345" cy="295" r="6"/><circle cx="330" cy="285" r="6"/><circle cx="315" cy="295" r="6"/>
+            <circle cx="298" cy="340" r="6"/><circle cx="370" cy="320" r="6"/><circle cx="365" cy="345" r="6"/>
+            <circle cx="312" cy="360" r="6"/>
+            <!-- Sul -->
+            <circle cx="290" cy="380" r="6"/><circle cx="275" cy="395" r="6"/><circle cx="260" cy="410" r="6"/>
+            <circle cx="245" cy="425" r="6"/><circle cx="230" cy="440" r="6"/><circle cx="285" cy="400" r="6"/>
+            <circle cx="270" cy="418" r="6"/><circle cx="255" cy="435" r="6"/><circle cx="300" cy="370" r="6"/>
+            <circle cx="240" cy="450" r="6"/>
           </g>
           <!-- Pin highlights -->
-          <g fill="#fff" opacity=".35">
-            <circle cx="350" cy="93" r="2.5"/><circle cx="370" cy="108" r="2.5"/><circle cx="385" cy="128" r="2.5"/>
-            <circle cx="395" cy="153" r="2.5"/><circle cx="400" cy="178" r="2.5"/><circle cx="390" cy="203" r="2.5"/>
-            <circle cx="375" cy="223" r="2.5"/><circle cx="360" cy="243" r="2.5"/><circle cx="340" cy="258" r="2.5"/>
-            <circle cx="320" cy="273" r="2.5"/><circle cx="345" cy="278" r="2.5"/><circle cx="370" cy="263" r="2.5"/>
-            <circle cx="310" cy="128" r="2.5"/><circle cx="330" cy="138" r="2.5"/><circle cx="295" cy="153" r="2.5"/>
-            <circle cx="275" cy="168" r="2.5"/><circle cx="260" cy="188" r="2.5"/><circle cx="250" cy="213" r="2.5"/>
-            <circle cx="245" cy="243" r="2.5"/><circle cx="255" cy="268" r="2.5"/><circle cx="270" cy="288" r="2.5"/>
-            <circle cx="290" cy="303" r="2.5"/><circle cx="310" cy="313" r="2.5"/><circle cx="325" cy="328" r="2.5"/>
-            <circle cx="310" cy="348" r="2.5"/><circle cx="290" cy="363" r="2.5"/><circle cx="270" cy="378" r="2.5"/>
-            <circle cx="250" cy="393" r="2.5"/><circle cx="235" cy="413" r="2.5"/><circle cx="225" cy="438" r="2.5"/>
-            <circle cx="200" cy="258" r="2.5"/><circle cx="185" cy="238" r="2.5"/><circle cx="170" cy="218" r="2.5"/>
-            <circle cx="160" cy="193" r="2.5"/><circle cx="155" cy="168" r="2.5"/><circle cx="165" cy="143" r="2.5"/>
-            <circle cx="195" cy="128" r="2.5"/><circle cx="220" cy="118" r="2.5"/><circle cx="245" cy="108" r="2.5"/>
-            <circle cx="230" cy="328" r="2.5"/><circle cx="215" cy="308" r="2.5"/><circle cx="200" cy="288" r="2.5"/>
-            <circle cx="300" cy="198" r="2.5"/><circle cx="320" cy="183" r="2.5"/><circle cx="335" cy="168" r="2.5"/>
-            <circle cx="280" cy="338" r="2.5"/><circle cx="260" cy="353" r="2.5"/><circle cx="340" cy="303" r="2.5"/>
+          <g fill="#fff" opacity=".3" aria-hidden="true">
+            <circle cx="200" cy="78" r="2"/><circle cx="370" cy="98" r="2"/><circle cx="395" cy="138" r="2"/>
+            <circle cx="260" cy="238" r="2"/><circle cx="320" cy="308" r="2"/><circle cx="335" cy="323" r="2"/>
+            <circle cx="350" cy="313" r="2"/><circle cx="290" cy="378" r="2"/><circle cx="275" cy="393" r="2"/>
+            <circle cx="340" cy="338" r="2"/><circle cx="405" cy="188" r="2"/><circle cx="380" cy="226" r="2"/>
+            <circle cx="310" cy="328" r="2"/><circle cx="345" cy="293" r="2"/><circle cx="230" cy="438" r="2"/>
           </g>
         </svg>
       </div>
