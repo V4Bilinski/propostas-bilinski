@@ -293,6 +293,25 @@ tbody tr:last-child td{border-bottom:none}
 .week-dot{width:10px;height:10px;border-radius:50%;background:var(--red);flex-shrink:0}
 .week-count{font-size:13px;color:var(--gray);font-weight:400;font-family:var(--font-body)}
 .week-trigger{gap:12px}
+/* Timeline cards panel */
+.tl-panel{margin-bottom:56px}
+.tl-cards{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;position:relative}
+.tl-card{background:linear-gradient(145deg,rgba(204,0,0,.15),rgba(204,0,0,.05));border:1px solid rgba(204,0,0,.25);border-radius:var(--radius-lg);padding:24px 20px;text-align:center;position:relative;transition:border-color .3s,transform .3s,box-shadow .3s;cursor:pointer}
+.tl-card:hover{border-color:rgba(204,0,0,.5);transform:translateY(-4px);box-shadow:0 8px 32px rgba(204,0,0,.15)}
+.tl-card-label{font-family:var(--font-head);font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--red);margin-bottom:12px}
+.tl-card-title{font-family:var(--font-head);font-size:15px;font-weight:700;color:var(--white);line-height:1.35;margin-bottom:10px;min-height:42px}
+.tl-card-desc{font-size:13px;color:var(--gray);line-height:1.6}
+.tl-track{display:flex;align-items:center;justify-content:center;gap:0;margin-top:20px;padding:0 10%}
+.tl-node{width:36px;height:36px;border-radius:50%;background:var(--red);display:flex;align-items:center;justify-content:center;font-family:var(--font-head);font-size:14px;font-weight:800;color:var(--white);flex-shrink:0;box-shadow:0 0 16px rgba(204,0,0,.4)}
+.tl-connector{flex:1;height:2px;background:linear-gradient(90deg,var(--red),rgba(204,0,0,.3));position:relative}
+.tl-connector::after{content:'→';position:absolute;right:-4px;top:50%;transform:translateY(-50%);color:var(--gray);font-size:14px}
+.tl-footer{text-align:center;margin-top:24px;font-size:15px;color:var(--gray);font-style:italic}
+@media(max-width:768px){
+  .tl-cards{grid-template-columns:1fr 1fr;gap:12px}
+  .tl-card:last-child{grid-column:1/-1}
+  .tl-track{display:none}
+  .tl-card-title{min-height:auto}
+}
 
 /* ========== TEAM CARDS ========== */
 .team-card{background:var(--surface);border:1px solid var(--surface-lt);border-radius:var(--radius-lg);padding:24px;text-align:center;transition:border-color .3s,transform .3s}
@@ -951,6 +970,49 @@ tbody tr:last-child td{border-bottom:none}
       <span class="section-label">04 Roadmap de entrega</span>
       <h2 class="section-title">Cronograma de execução</h2>
       <p class="section-desc">O projeto e estruturado em 5 semanas com entregas que culminam em um Plano de Ação validado.</p>
+    </div>
+
+    <!-- Timeline visual cards -->
+    <div class="tl-panel reveal">
+      <div class="tl-cards">
+        <div class="tl-card">
+          <div class="tl-card-label">Semana 1</div>
+          <div class="tl-card-title">Onboarding & Assessment</div>
+          <div class="tl-card-desc">Alinhamento de expectativas, boas-vindas e preenchimento do assessment diagnóstico.</div>
+        </div>
+        <div class="tl-card">
+          <div class="tl-card-label">Semana 2</div>
+          <div class="tl-card-title">Diagnóstico Comercial 360°</div>
+          <div class="tl-card-desc">Entrevistas, mapeamento de processos, benchmark e cliente oculto.</div>
+        </div>
+        <div class="tl-card">
+          <div class="tl-card-label">Semana 3</div>
+          <div class="tl-card-title">Auditoria & Análise de CRM</div>
+          <div class="tl-card-desc">Duas trilhas: auditoria profunda para quem tem CRM ou avaliação de necessidade para quem não tem.</div>
+        </div>
+        <div class="tl-card">
+          <div class="tl-card-label">Semana 4</div>
+          <div class="tl-card-title">Definições Operacionais</div>
+          <div class="tl-card-desc">Estrutura organizacional, KPIs, SLAs, BPMN comercial e scripts de vendas.</div>
+        </div>
+        <div class="tl-card">
+          <div class="tl-card-label">Semana 5</div>
+          <div class="tl-card-title">Treinamento & Entrega</div>
+          <div class="tl-card-desc">Imersão de CRM e treinamento comercial com a jornada unificada.</div>
+        </div>
+      </div>
+      <div class="tl-track" aria-hidden="true">
+        <span class="tl-node">1</span>
+        <span class="tl-connector"></span>
+        <span class="tl-node">2</span>
+        <span class="tl-connector"></span>
+        <span class="tl-node">3</span>
+        <span class="tl-connector"></span>
+        <span class="tl-node">4</span>
+        <span class="tl-connector"></span>
+        <span class="tl-node">5</span>
+      </div>
+      <p class="tl-footer">Ao final do processo: plano de ação validado, processos documentados e time capacitado.</p>
     </div>
 
     <!-- Semana 1 -->
