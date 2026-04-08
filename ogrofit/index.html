@@ -383,11 +383,13 @@ tbody tr:last-child td{border-bottom:none}
   /* Timeline cards */
   .tl-panel{overflow-x:auto;-webkit-overflow-scrolling:touch;padding-bottom:8px;scrollbar-width:none}
   .tl-panel::-webkit-scrollbar{display:none}
-  .tl-cards{display:flex!important;gap:12px;min-width:max-content;grid-template-columns:none!important}
+  .tl-panel>*{min-width:max-content}
+  .tl-cards{display:flex!important;gap:12px;grid-template-columns:none!important}
   .tl-card{min-width:150px;max-width:170px;flex-shrink:0}
   .tl-card-title{min-height:auto;font-size:14px}
   .tl-card-desc{font-size:12px}
-  .tl-track{min-width:max-content;padding:0 4px}
+  .tl-track{padding:0 4px}
+  .tl-footer{min-width:max-content;white-space:nowrap}
 
   /* Gantt */
   .gantt-container{padding:16px;overflow-x:auto}
@@ -396,6 +398,10 @@ tbody tr:last-child td{border-bottom:none}
   /* CTA */
   .cta-visual{gap:20px}
   .cta-num .n{font-size:24px}
+
+  /* Accordions */
+  .accordion-trigger{font-size:14px;padding:16px 18px;gap:8px}
+  .week-count{white-space:nowrap}
 
   /* Cards */
   .card{padding:20px}
@@ -443,7 +449,12 @@ tbody tr:last-child td{border-bottom:none}
   .cta-num .n{font-size:20px}
   .cta-section h2{font-size:22px}
 
+  .accordion-trigger{font-size:13px;padding:14px 16px}
+  .week-count{font-size:11px;white-space:nowrap}
+  .accordion-trigger>div:first-child{flex-wrap:nowrap;overflow:hidden}
+  .accordion-trigger>div:first-child>span:not(.week-dot):not(.week-count){white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
   .tl-card{min-width:140px;max-width:155px}
+  .tl-card-desc{font-size:11px}
   .tl-node{width:28px;height:28px;font-size:11px}
 }
 
