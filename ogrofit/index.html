@@ -1,0 +1,1664 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>V4 Bilinski x OGROFIT | Construção de Marca de Legado</title>
+<meta name="description" content="Proposta exclusiva V4 Bilinski para OGROFIT - Estruturação estratégica, redes sociais é e-commerce. Construção de marca de legado no universo fitness.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* ========== RESET & BASE ========== */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px;-webkit-text-size-adjust:100%}
+body{font-family:'Inter',sans-serif;background:#0A0A0A;color:#F0F0F0;line-height:1.6;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:#CC0000;text-decoration:none;transition:color .2s}
+a:hover{color:#FF2020}
+::selection{background:rgba(204,0,0,.3);color:#fff}
+
+/* ========== CSS VARIABLES ========== */
+:root{
+  --red:#CC0000;--red-light:#FF2020;--red-dark:#990000;
+  --bg:#0A0A0A;--surface:#111111;--surface-md:#1A1A1A;--surface-lt:#222222;
+  --white:#FFFFFF;--off-white:#F0F0F0;--gray:#AAAAAA;--gray-md:#666666;--gray-lt:#CCCCCC;
+  --green:#22C55E;--amber:#F59E0B;--gold:#D4AF37;
+  --font-head:'Plus Jakarta Sans',sans-serif;
+  --font-body:'Inter',sans-serif;
+  --font-mono:'JetBrains Mono',monospace;
+  --radius:8px;--radius-lg:12px;--radius-xl:16px;
+  --shadow:0 4px 6px rgba(0,0,0,.4),0 0 0 1px rgba(255,255,255,.05);
+  --shadow-red:0 0 20px rgba(204,0,0,.3);
+  --shadow-gold:0 0 20px rgba(212,175,55,.3);
+  --max-w:1200px;
+}
+
+/* ========== UTILITIES ========== */
+.container{max-width:var(--max-w);margin:0 auto;padding:0 24px}
+.mono{font-family:var(--font-mono);font-weight:500}
+.text-red{color:var(--red)}
+.text-gray{color:var(--gray)}
+.text-gold{color:var(--gold)}
+.text-green{color:var(--green)}
+.text-amber{color:var(--amber)}
+.tag{display:inline-block;padding:4px 12px;border-radius:9999px;font-size:11px;font-weight:600;letter-spacing:.05em;text-transform:uppercase}
+.tag-red{background:rgba(204,0,0,.15);color:#FF6666;border:1px solid rgba(204,0,0,.3)}
+.tag-green{background:rgba(34,197,94,.15);color:#4ADE80;border:1px solid rgba(34,197,94,.3)}
+.tag-amber{background:rgba(245,158,11,.15);color:#FCD34D;border:1px solid rgba(245,158,11,.3)}
+.tag-gold{background:rgba(212,175,55,.15);color:#D4AF37;border:1px solid rgba(212,175,55,.3)}
+
+/* ========== ANIMATIONS ========== */
+@keyframes fadeInUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.5}}
+@keyframes glow{0%,100%{box-shadow:0 0 5px rgba(204,0,0,.3)}50%{box-shadow:0 0 20px rgba(204,0,0,.6)}}
+@keyframes glowGold{0%,100%{box-shadow:0 0 5px rgba(212,175,55,.2)}50%{box-shadow:0 0 20px rgba(212,175,55,.5)}}
+@keyframes shimmer{0%{background-position:-200% 0}100%{background-position:200% 0}}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+@keyframes offer-glow{0%,100%{box-shadow:0 0 20px rgba(204,0,0,.15),0 0 60px rgba(204,0,0,.05)}50%{box-shadow:0 0 30px rgba(204,0,0,.25),0 0 80px rgba(204,0,0,.1)}}
+@keyframes offer-glow-gold{0%,100%{box-shadow:0 0 20px rgba(212,175,55,.15),0 0 60px rgba(212,175,55,.05)}50%{box-shadow:0 0 30px rgba(212,175,55,.25),0 0 80px rgba(212,175,55,.1)}}
+@keyframes offer-border{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+@keyframes price-in{from{opacity:0;transform:scale(.8) translateY(10px)}to{opacity:1;transform:scale(1) translateY(0)}}
+@keyframes check-in{from{opacity:0;transform:translateX(-12px)}to{opacity:1;transform:translateX(0)}}
+
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .6s ease,transform .6s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-scale{opacity:0;transform:scale(.9);transition:opacity .6s ease,transform .6s ease}
+.reveal-scale.visible{opacity:1;transform:scale(1)}
+.stagger>*{transition-delay:calc(var(--i,0) * .1s)}
+
+/* ========== NAVIGATION ========== */
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,10,10,.92);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.06);transition:transform .3s ease}
+.nav.hidden{transform:translateY(-100%)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;flex-wrap:nowrap;padding:0 36px;max-width:var(--max-w);margin:0 auto;min-height:76px;gap:20px;position:relative}
+.nav-brand{display:flex;align-items:center;flex-shrink:0}
+.brand-collab{display:flex;align-items:center;gap:0}
+.brand-logo-v4{height:40px;width:auto;object-fit:contain;flex-shrink:0}
+.brand-separator{width:1.5px;height:36px;background:rgba(255,255,255,.18);margin:0 24px;flex-shrink:0}
+.brand-client{height:72px;width:auto;object-fit:contain;flex-shrink:0;filter:brightness(1.1)}
+.nav-links{display:flex;gap:24px;align-items:center}
+.nav-links a{font-size:13px;color:var(--gray);font-weight:500;letter-spacing:.02em;transition:color .2s}
+.nav-links a:hover,.nav-links a.active{color:var(--white)}
+.hamburger{display:none;flex-direction:column;gap:6px;background:none;border:none;cursor:pointer;padding:12px;width:48px;height:48px;align-items:center;justify-content:center;flex-shrink:0}
+.hamburger span{width:24px;height:2px;background:var(--white);border-radius:2px;transition:.3s}
+.hamburger.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+
+/* ========== HERO ========== */
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;padding:120px 24px 80px}
+.hero::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:radial-gradient(ellipse 80% 60% at 50% 40%,rgba(204,0,0,.08) 0%,transparent 70%)}
+.hero-grid{position:absolute;top:0;left:0;right:0;bottom:0;background-image:linear-gradient(rgba(255,255,255,.02) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.02) 1px,transparent 1px);background-size:60px 60px;opacity:.5}
+.hero-content{text-align:center;max-width:900px;position:relative;z-index:2}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;padding:6px 16px;border-radius:9999px;background:rgba(204,0,0,.1);border:1px solid rgba(204,0,0,.3);font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#FF6666;margin-bottom:24px;animation:fadeIn 1s ease .2s both}
+.hero-badge::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--red);animation:pulse 2s infinite}
+.hero h1{font-family:var(--font-head);font-size:clamp(32px,6vw,64px);font-weight:800;letter-spacing:-.02em;line-height:1.1;color:var(--white);margin-bottom:20px;animation:fadeInUp .8s ease .4s both}
+.hero h1 span{background:linear-gradient(135deg,var(--red),var(--red-light));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;color:transparent}
+.hero-sub{font-size:clamp(16px,2.2vw,20px);color:var(--gray);max-width:700px;margin:0 auto 32px;line-height:1.7;animation:fadeInUp .8s ease .6s both}
+.hero-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:20px;margin-top:40px;animation:fadeInUp .8s ease .8s both}
+.hero-stat{text-align:center;padding:20px 12px;background:var(--surface);border:1px solid var(--surface-lt);border-radius:var(--radius-lg);transition:border-color .3s,box-shadow .3s}
+.hero-stat:hover{border-color:var(--red);box-shadow:var(--shadow-red)}
+.hero-stat .num{font-family:var(--font-mono);font-size:28px;font-weight:700;color:var(--white);display:block}
+.hero-stat .label{font-size:12px;color:var(--gray);text-transform:uppercase;letter-spacing:.05em;margin-top:4px}
+.scroll-indicator{position:absolute;bottom:30px;left:50%;transform:translateX(-50%);display:none;flex-direction:column;align-items:center;gap:6px;animation:float 3s ease-in-out infinite;z-index:1;pointer-events:none}
+.scroll-indicator span{font-size:10px;color:var(--gray-md);letter-spacing:.1em;text-transform:uppercase}
+.scroll-arrow{width:16px;height:16px;border-right:2px solid var(--gray-md);border-bottom:2px solid var(--gray-md);transform:rotate(45deg)}
+@media(min-width:769px){.scroll-indicator{display:flex}}
+.hero-float{position:absolute;padding:10px 16px;background:rgba(17,17,17,.9);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);font-size:12px;color:var(--gray);backdrop-filter:blur(8px);z-index:1;display:none}
+@media(min-width:1024px){.hero-float{display:flex;align-items:center;gap:8px}}
+.hero-float svg{width:16px;height:16px;stroke:var(--red);fill:none;stroke-width:2}
+.hero-float.hf-1{top:25%;left:5%;animation:float 4s ease-in-out infinite}
+.hero-float.hf-2{top:35%;right:5%;animation:float 4s ease-in-out 1s infinite}
+.hero-float.hf-3{bottom:25%;left:8%;animation:float 4s ease-in-out 2s infinite}
+
+/* ========== SECTIONS ========== */
+section{padding:80px 0;position:relative}
+section:nth-child(odd){background:var(--bg)}
+section:nth-child(even){background:var(--surface)}
+.section-label{display:inline-flex;align-items:center;gap:8px;font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--red);margin-bottom:12px}
+.section-label::before{content:'';width:24px;height:2px;background:var(--red)}
+.section-title{font-family:var(--font-head);font-size:clamp(24px,4vw,40px);font-weight:700;letter-spacing:-.01em;color:var(--white);margin-bottom:16px;line-height:1.2}
+.section-desc{font-size:17px;color:var(--gray);max-width:700px;line-height:1.7;margin-bottom:40px}
+
+/* ========== CARDS ========== */
+.card{background:var(--surface);border:1px solid var(--surface-lt);border-radius:var(--radius-lg);padding:24px;transition:border-color .3s,box-shadow .3s,transform .3s}
+.card:hover{border-color:rgba(204,0,0,.4);box-shadow:0 0 12px rgba(204,0,0,.15);transform:translateY(-2px)}
+.card-header{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+.card-icon{width:40px;height:40px;border-radius:var(--radius);background:rgba(204,0,0,.1);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.card-icon svg{width:20px;height:20px;stroke:var(--red);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.card h3{font-family:var(--font-head);font-size:18px;font-weight:600;color:var(--white)}
+.card p{font-size:14px;color:var(--gray);line-height:1.6}
+
+/* ========== GRID LAYOUTS ========== */
+.grid-2{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:20px}
+.grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+.grid-4{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.grid-5{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px}
+
+/* ========== EXEC BOXES ========== */
+.exec-highlight{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;margin-top:32px}
+.exec-box{background:var(--surface-md);border:1px solid var(--surface-lt);border-radius:var(--radius-lg);padding:24px;position:relative;overflow:hidden}
+.exec-box::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;background:var(--red)}
+.exec-box h3{font-family:var(--font-head);font-size:16px;font-weight:600;color:var(--white);margin-bottom:12px}
+.exec-box p{font-size:14px;color:var(--gray);line-height:1.7}
+
+/* ========== LOGO MARQUEE ========== */
+.logo-marquee{overflow:hidden;position:relative;padding:24px 0}
+.logo-marquee::before,.logo-marquee::after{content:'';position:absolute;top:0;bottom:0;width:100px;z-index:2}
+.logo-marquee::before{left:0;background:linear-gradient(90deg,var(--bg),transparent)}
+.logo-marquee::after{right:0;background:linear-gradient(90deg,transparent,var(--bg))}
+.logo-track{display:flex;gap:48px;align-items:center;animation:marquee 30s linear infinite;width:max-content}
+.logo-track img{height:32px;width:auto;filter:brightness(0) invert(1);opacity:.7;transition:all .3s}
+.logo-track img:hover{filter:brightness(0) invert(1);opacity:1}
+
+/* ========== QUOTE BLOCK (NEW) ========== */
+.quote-block{background:var(--surface-md);border-left:3px solid var(--red);border-radius:0 var(--radius) var(--radius) 0;padding:16px 20px;margin-top:32px;position:relative;max-width:700px}
+.quote-block::before{content:'\201C';position:absolute;top:4px;left:8px;font-size:28px;color:rgba(204,0,0,.25);font-family:Georgia,serif;line-height:1}
+.quote-block p{font-size:15px;color:var(--gray);line-height:1.6;font-style:italic;padding-left:16px}
+.quote-block cite{display:block;font-size:12px;color:var(--gray-md);font-style:normal;margin-top:8px;padding-left:16px}
+
+/* ========== BENCHMARK CARDS (NEW) ========== */
+.benchmark-card{background:var(--surface);border:1px solid var(--surface-lt);border-radius:var(--radius-lg);padding:0;overflow:hidden;transition:border-color .3s,transform .3s,box-shadow .3s}
+.benchmark-card:hover{border-color:rgba(212,175,55,.4);box-shadow:0 0 16px rgba(212,175,55,.15);transform:translateY(-3px)}
+.benchmark-top{height:4px;background:var(--gold)}
+.benchmark-body{padding:24px}
+.benchmark-name{font-family:var(--font-head);font-size:20px;font-weight:700;color:var(--white);margin-bottom:8px}
+.benchmark-context{font-size:13px;color:var(--gray);line-height:1.6}
+
+/* ========== SYSTEM CARDS (NEW) ========== */
+.system-card{background:var(--surface);border:1px solid var(--surface-lt);border-radius:var(--radius-lg);padding:0;overflow:hidden;transition:border-color .3s,transform .3s,box-shadow .3s}
+.system-card:hover{transform:translateY(-3px)}
+.system-card--red:hover{border-color:rgba(204,0,0,.4);box-shadow:0 0 14px rgba(204,0,0,.15)}
+.system-card--emerald:hover{border-color:rgba(34,197,94,.4);box-shadow:0 0 14px rgba(34,197,94,.15)}
+.system-card--gold:hover{border-color:rgba(212,175,55,.4);box-shadow:0 0 14px rgba(212,175,55,.15)}
+.system-top{height:4px}
+.system-top--red{background:var(--red)}
+.system-top--emerald{background:var(--green)}
+.system-top--gold{background:var(--gold)}
+.system-body{padding:28px}
+.system-num{font-family:var(--font-mono);font-size:36px;font-weight:700;opacity:.25;margin-bottom:8px}
+.system-num--red{color:var(--red)}
+.system-num--emerald{color:var(--green)}
+.system-num--gold{color:var(--gold)}
+.system-nickname{font-family:var(--font-head);font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;margin-bottom:4px}
+.system-nickname--red{color:var(--red)}
+.system-nickname--emerald{color:var(--green)}
+.system-nickname--gold{color:var(--gold)}
+.system-title{font-family:var(--font-head);font-size:18px;font-weight:700;color:var(--white);margin-bottom:12px}
+.system-desc{font-size:14px;color:var(--gray);line-height:1.6;margin-bottom:16px}
+.system-meta{display:flex;gap:8px;flex-wrap:wrap}
+
+/* ========== ACCORDION ========== */
+.accordion-group{margin-bottom:12px;border:1px solid var(--surface-lt);border-radius:var(--radius-lg);overflow:hidden}
+.accordion-trigger{width:100%;display:flex;align-items:center;justify-content:space-between;padding:18px 24px;background:var(--surface);border:none;color:var(--white);cursor:pointer;font-family:var(--font-head);font-size:15px;font-weight:600;text-align:left;transition:background .2s}
+.accordion-trigger:hover{background:var(--surface-md)}
+.accordion-trigger .chevron{width:20px;height:20px;stroke:var(--gray);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;transition:transform .3s;flex-shrink:0}
+.accordion-trigger[aria-expanded="true"] .chevron{transform:rotate(180deg)}
+.accordion-content{max-height:0;overflow:hidden;transition:max-height .5s ease,opacity .3s ease;opacity:0;background:var(--surface-md)}
+.accordion-content.open{max-height:4000px;opacity:1}
+.week-dot{width:10px;height:10px;border-radius:50%;background:var(--red);flex-shrink:0}
+.week-dot--emerald{background:var(--green)}
+.week-dot--gold{background:var(--gold)}
+.week-count{font-size:13px;color:var(--gray);font-weight:400;font-family:var(--font-body)}
+
+/* ========== DATA TABLE ========== */
+.data-table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:var(--radius-lg);border:1px solid var(--surface-lt)}
+table{width:100%;border-collapse:collapse;font-size:13px}
+thead{background:var(--surface-md)}
+th{font-family:var(--font-head);font-weight:600;font-size:11px;text-transform:uppercase;letter-spacing:.04em;color:var(--gray);padding:12px 12px;text-align:left;white-space:nowrap;border-bottom:1px solid var(--surface-lt)}
+td{padding:10px 12px;border-bottom:1px solid rgba(255,255,255,.04);color:var(--off-white);white-space:normal}
+tbody tr{transition:background .2s}
+tbody tr:hover{background:rgba(204,0,0,.04)}
+tbody tr:last-child td{border-bottom:none}
+
+/* ========== PRODUCT CARD ========== */
+.product-card{background:var(--surface);border:1px solid var(--surface-lt);border-radius:var(--radius-lg);overflow:hidden}
+.product-card-top{height:4px;background:var(--red)}
+.product-card-top--emerald{background:var(--green)}
+.product-card-top--gold{background:var(--gold)}
+.product-card-body{padding:28px}
+.product-meta{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-bottom:20px}
+.product-meta-item{font-size:13px;color:var(--gray);display:flex;align-items:center;gap:6px}
+.product-meta-item svg{width:14px;height:14px;stroke:var(--gray);fill:none;stroke-width:2}
+
+/* ========== GANTT TIMELINE (NEW) ========== */
+.gantt-container{background:var(--surface);border:1px solid var(--surface-lt);border-radius:var(--radius-lg);padding:28px;overflow-x:auto}
+.gantt-grid{display:grid;grid-template-columns:180px repeat(8,1fr);gap:8px 0;align-items:center;min-width:700px}
+.gantt-header{font-family:var(--font-mono);font-size:11px;font-weight:500;color:var(--gray);text-align:center;padding:8px 4px;border-bottom:1px solid var(--surface-lt)}
+.gantt-label{font-family:var(--font-head);font-size:14px;font-weight:600;color:var(--white);padding:12px 0;padding-right:16px;white-space:nowrap}
+.gantt-cell{padding:8px 2px;position:relative;min-height:44px}
+.gantt-bar{height:32px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600;color:rgba(255,255,255,.9);letter-spacing:.02em}
+.gantt-bar--red{background:linear-gradient(135deg,rgba(204,0,0,.7),rgba(204,0,0,.4))}
+.gantt-bar--emerald{background:linear-gradient(135deg,rgba(34,197,94,.5),rgba(34,197,94,.3))}
+.gantt-bar--gold{background:linear-gradient(135deg,rgba(212,175,55,.5),rgba(212,175,55,.3))}
+
+/* ========== ECO RINGS ========== */
+.eco-section-wrap{padding:100px 0;position:relative;overflow:hidden;background:var(--bg)}
+.eco-section-wrap::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:radial-gradient(ellipse 70% 70% at 65% 50%,rgba(204,0,0,.06),transparent)}
+.eco-layout{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;min-height:500px}
+.eco-text{position:relative;z-index:2}
+.eco-title{font-family:var(--font-head);font-size:clamp(28px,5vw,48px);font-weight:800;color:var(--white);line-height:1.3;letter-spacing:-.02em;margin-bottom:20px}
+.eco-desc{font-size:17px;color:var(--gray);line-height:1.7;max-width:520px}
+.eco-visual{position:relative;display:flex;align-items:center;justify-content:center;min-height:400px}
+.eco-rings{position:relative;width:440px;height:440px}
+.eco-ring{position:absolute;border-radius:50%;border:2px solid rgba(204,0,0,.2);top:50%;left:50%;transform:translate(-50%,-50%)}
+.eco-ring-1{width:100%;height:100%;border-color:rgba(204,0,0,.15)}
+.eco-ring-2{width:75%;height:75%;border-color:rgba(204,0,0,.2)}
+.eco-ring-3{width:50%;height:50%;border-color:rgba(204,0,0,.28)}
+.eco-ring-4{width:25%;height:25%;border-color:rgba(204,0,0,.35)}
+.eco-center{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:120px;height:120px;border-radius:24px;background:rgba(204,0,0,.12);border:2px solid rgba(204,0,0,.3);display:flex;align-items:center;justify-content:center;z-index:2;box-shadow:0 0 40px rgba(204,0,0,.2)}
+.eco-center img{width:80px;height:80px;object-fit:contain;filter:brightness(1.2)}
+.eco-ring-label{position:absolute;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--off-white);white-space:nowrap;background:var(--bg);padding:4px 12px;border-radius:6px;border:1px solid rgba(204,0,0,.15)}
+.eco-ring-label-1{top:0;left:50%;transform:translateX(-50%) translateY(-50%)}
+.eco-ring-label-2{top:12.5%;right:0;transform:translateX(30%)}
+.eco-ring-label-3{top:25%;left:0;transform:translateX(-30%)}
+.eco-ring-label-4{bottom:38%;right:15%}
+
+/* ========== TEAM ========== */
+.team-card{background:var(--surface);border:1px solid var(--surface-lt);border-radius:var(--radius-lg);padding:24px;text-align:center;transition:border-color .3s,transform .3s}
+.team-card:hover{border-color:rgba(204,0,0,.3);transform:translateY(-2px)}
+.team-icon{width:56px;height:56px;border-radius:50%;background:rgba(204,0,0,.08);border:2px solid rgba(204,0,0,.3);display:flex;align-items:center;justify-content:center;margin:0 auto 16px}
+.team-icon svg{width:28px;height:28px;stroke:var(--red);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.team-name{font-family:var(--font-head);font-size:16px;font-weight:700;color:var(--white);margin-bottom:4px}
+.team-role{font-size:13px;color:var(--gray);margin-bottom:8px}
+
+/* ========== PHASE TRANSITION ========== */
+.phase-transition{text-align:center;padding:60px 0 40px;position:relative}
+.phase-transition .tag{margin-bottom:16px}
+.phase-transition h3{font-family:var(--font-head);font-size:clamp(20px,3vw,28px);font-weight:700;color:var(--white)}
+
+/* ========== OFFER CARDS ========== */
+.offer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:24px;max-width:860px;margin:0 auto}
+.offer-card{position:relative;border-radius:20px;padding:3px;background:linear-gradient(135deg,rgba(204,0,0,.6),rgba(204,0,0,.1),rgba(204,0,0,.4),rgba(204,0,0,.1));background-size:300% 300%;animation:offer-border 6s ease infinite,offer-glow 4s ease-in-out infinite}
+.offer-card--gold{background:linear-gradient(135deg,rgba(212,175,55,.6),rgba(212,175,55,.1),rgba(212,175,55,.4),rgba(212,175,55,.1));animation:offer-border 6s ease infinite,offer-glow-gold 4s ease-in-out infinite}
+.offer-inner{border-radius:18px;background:linear-gradient(180deg,rgba(20,10,10,.95) 0%,rgba(12,6,6,.98) 100%);padding:40px 28px 36px;text-align:center;position:relative;overflow:hidden}
+.offer-inner::before{content:'';position:absolute;top:-60%;left:-20%;width:140%;height:140%;background:radial-gradient(ellipse at center,rgba(204,0,0,.08) 0%,transparent 70%);pointer-events:none}
+.offer-card--gold .offer-inner::before{background:radial-gradient(ellipse at center,rgba(212,175,55,.06) 0%,transparent 70%)}
+.offer-badge{display:inline-block;background:var(--red);color:#fff;font-size:11px;font-weight:700;letter-spacing:.12em;padding:8px 28px;border-radius:50px;text-transform:uppercase;position:relative;z-index:1}
+.offer-badge--gold{background:var(--gold);color:#1a1a1a}
+.offer-price{font-family:var(--font-head);font-size:clamp(32px,5vw,44px);font-weight:800;color:#fff;letter-spacing:-.02em;position:relative;z-index:1;margin:20px 0 8px}
+.offer-price-secondary{font-size:14px;color:var(--gray);position:relative;z-index:1;margin-bottom:20px}
+.offer-check{display:flex;align-items:center;gap:12px;font-size:14px;color:var(--gray-lt);padding:10px 0;border-bottom:1px solid rgba(255,255,255,.04);text-align:left}
+.offer-check:last-child{border-bottom:none}
+.offer-check-icon{width:22px;height:22px;border-radius:50%;background:rgba(204,0,0,.15);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.offer-check-icon svg{width:12px;height:12px;stroke:var(--red);stroke-width:3;fill:none}
+.offer-card--gold .offer-check-icon{background:rgba(212,175,55,.15)}
+.offer-card--gold .offer-check-icon svg{stroke:var(--gold)}
+
+/* ========== STEPS ROW (NEW) ========== */
+.steps-row{display:flex;justify-content:center;gap:40px;margin:40px 0;flex-wrap:wrap}
+.step-item{display:flex;align-items:center;gap:16px;text-align:left}
+.step-num{font-family:var(--font-mono);font-size:24px;font-weight:700;color:var(--red);flex-shrink:0}
+.step-text{font-size:14px;color:var(--gray-lt);line-height:1.4}
+.step-text strong{color:var(--white);display:block;font-family:var(--font-head)}
+.step-connector{width:40px;height:2px;background:var(--surface-lt);flex-shrink:0}
+
+/* ========== CTA SECTION ========== */
+.cta-section{background:linear-gradient(135deg,rgba(204,0,0,.08),rgba(204,0,0,.02));padding:80px 0;text-align:center}
+.cta-section h2{font-family:var(--font-head);font-size:clamp(24px,4vw,36px);font-weight:700;color:var(--white);margin-bottom:16px}
+.cta-section p{font-size:17px;color:var(--gray);max-width:600px;margin:0 auto 32px}
+.cta-visual{display:flex;justify-content:center;gap:32px;margin-bottom:32px;flex-wrap:wrap}
+.cta-num{text-align:center}
+.cta-num .n{font-family:var(--font-mono);font-size:32px;font-weight:700;color:var(--white);display:block}
+.cta-num .l{font-size:12px;color:var(--gray);text-transform:uppercase;letter-spacing:.04em}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:6px;font-family:var(--font-body);font-size:15px;font-weight:600;cursor:pointer;border:none;transition:all .2s}
+.btn-primary{background:var(--red);color:#fff}
+.btn-primary:hover{background:var(--red-light);box-shadow:var(--shadow-red);color:#fff}
+.btn-outline{background:transparent;color:var(--white);border:1px solid var(--surface-lt)}
+.btn-outline:hover{border-color:var(--red);color:var(--red)}
+
+/* ========== SECTION DIVIDER ========== */
+.section-divider{width:100%;height:1px;background:linear-gradient(90deg,transparent,rgba(204,0,0,.3),transparent);margin:0;border:none}
+
+/* ========== FOOTER ========== */
+.footer{padding:40px 0;background:var(--bg);border-top:1px solid var(--surface-lt);text-align:center}
+.footer p{font-size:13px;color:var(--gray-md)}
+
+/* ========== RESPONSIVE ========== */
+@media(max-width:1024px){
+  .eco-layout{grid-template-columns:1fr;text-align:center}
+  .eco-desc{margin:0 auto}
+  .eco-visual{margin-top:40px}
+  .gantt-grid{min-width:600px}
+}
+@media(max-width:768px){
+  .nav-inner{padding:0 16px;min-height:64px}
+  .brand-logo-v4{height:28px}
+  .brand-client{height:52px}
+  .brand-separator{margin:0 12px;height:24px}
+  .hamburger{display:flex}
+  .nav-links{position:absolute;top:100%;left:0;right:0;flex-direction:column;background:rgba(10,10,10,.98);padding:16px 0;gap:0;max-height:0;overflow:hidden;transition:max-height .3s}
+  .nav-links.open{max-height:400px}
+  .nav-links a{padding:12px 24px;display:block;border-bottom:1px solid var(--surface-lt)}
+  .grid-2,.grid-3,.grid-4,.grid-5{grid-template-columns:1fr}
+  .offer-grid{grid-template-columns:1fr}
+  .steps-row{flex-direction:column;align-items:center}
+  .step-connector{display:none}
+  .eco-rings{width:320px;height:320px}
+}
+
+/* ========== TIMELINE CARDS ========== */
+.tl-panel{margin-bottom:56px}
+.tl-cards{display:grid;grid-template-columns:repeat(var(--tl-cols,5),1fr);gap:16px;position:relative}
+.tl-card{background:linear-gradient(145deg,rgba(204,0,0,.15),rgba(204,0,0,.05));border:1px solid rgba(204,0,0,.25);border-radius:var(--radius-lg);padding:24px 20px;text-align:center;position:relative;transition:border-color .3s,transform .3s,box-shadow .3s;cursor:pointer}
+.tl-card:hover{border-color:rgba(204,0,0,.5);transform:translateY(-4px);box-shadow:0 8px 32px rgba(204,0,0,.15)}
+.tl-card--emerald{background:linear-gradient(145deg,rgba(34,197,94,.15),rgba(34,197,94,.05));border-color:rgba(34,197,94,.25)}
+.tl-card--emerald:hover{border-color:rgba(34,197,94,.5);box-shadow:0 8px 32px rgba(34,197,94,.15)}
+.tl-card--gold{background:linear-gradient(145deg,rgba(212,175,55,.15),rgba(212,175,55,.05));border-color:rgba(212,175,55,.25)}
+.tl-card--gold:hover{border-color:rgba(212,175,55,.5);box-shadow:0 8px 32px rgba(212,175,55,.15)}
+.tl-card-label{font-family:var(--font-head);font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--red);margin-bottom:12px}
+.tl-card--emerald .tl-card-label{color:var(--green)}
+.tl-card--gold .tl-card-label{color:var(--gold)}
+.tl-card-title{font-family:var(--font-head);font-size:15px;font-weight:700;color:var(--white);line-height:1.35;margin-bottom:10px;min-height:42px}
+.tl-card-desc{font-size:13px;color:var(--gray);line-height:1.6}
+.tl-track{display:flex;align-items:center;gap:0;margin-top:24px}
+.tl-node{width:34px;height:34px;border-radius:50%;background:var(--red);display:flex;align-items:center;justify-content:center;font-family:var(--font-head);font-size:13px;font-weight:800;color:var(--white);flex-shrink:0;box-shadow:0 0 12px rgba(204,0,0,.4);position:relative;z-index:2}
+.tl-node--emerald{background:var(--green);box-shadow:0 0 12px rgba(34,197,94,.4)}
+.tl-node--gold{background:var(--gold);box-shadow:0 0 12px rgba(212,175,55,.4);color:#1a1a1a}
+.tl-connector{flex:1;height:2px;background:var(--red)}
+.tl-connector--emerald{background:var(--green)}
+.tl-connector--gold{background:var(--gold)}
+.tl-footer{text-align:center;margin-top:24px;font-size:15px;color:var(--gray);font-style:italic}
+
+/* ========== GANTT ANIMATION ========== */
+@keyframes barSlideIn{from{width:0;opacity:0}to{width:100%;opacity:1}}
+.gantt-bar{animation:barSlideIn 1s ease-out both}
+.gantt-grid .gantt-bar--red{animation-delay:.2s}
+.gantt-grid .gantt-bar--emerald{animation-delay:.5s}
+.gantt-grid .gantt-bar--gold{animation-delay:.8s}
+
+
+/* ========== OFFER CTA BUTTON ========== */
+.offer-cta{display:inline-block;background:var(--red);color:#fff;font-family:var(--font-head);font-size:15px;font-weight:700;padding:16px 52px;border-radius:12px;text-decoration:none;transition:all .3s ease;position:relative;z-index:1;width:100%;text-align:center}
+.offer-cta:hover{background:var(--red-light);transform:translateY(-2px);box-shadow:0 8px 24px rgba(204,0,0,.3);color:#fff}
+.offer-cta--gold{background:var(--gold);color:#1a1a1a}
+.offer-cta--gold:hover{background:#e6c445;box-shadow:0 8px 24px rgba(212,175,55,.3);color:#1a1a1a}
+
+</style>
+</head>
+
+<body>
+
+<!-- ============================================================ -->
+<!-- NAVIGATION -->
+<!-- ============================================================ -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <div class="nav-brand">
+      <div class="brand-collab">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABDgAAAFeCAYAAABgha9vAAAACXBIWXMAAAsTAAALEwEAmpwYAAAFyWlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNy4xLWMwMDAgNzkuZWRhMmIzZiwgMjAyMS8xMS8xNC0xMjozMDo0MiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIiB4bWxuczpwaG90b3Nob3A9Imh0dHA6Ly9ucy5hZG9iZS5jb20vcGhvdG9zaG9wLzEuMC8iIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIDIzLjEgKFdpbmRvd3MpIiB4bXA6Q3JlYXRlRGF0ZT0iMjAyMi0wMi0wOFQxNDo1NTozMy0wMzowMCIgeG1wOk1ldGFkYXRhRGF0ZT0iMjAyMi0wMi0wOFQxNDo1NTozMy0wMzowMCIgeG1wOk1vZGlmeURhdGU9IjIwMjItMDItMDhUMTQ6NTU6MzMtMDM6MDAiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MWYzNjg1NzQtMzZiOC02MjRkLWEyZmUtMjY2YTVlMDI4YzBjIiB4bXBNTTpEb2N1bWVudElEPSJhZG9iZTpkb2NpZDpwaG90b3Nob3A6MzZhYmU1YTItYmIzMS1jZTQxLWEwNDYt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" alt="V4 Company" class="brand-logo-v4">
+        <div class="brand-separator"></div>
+        <img src="logo-ogrofit.jpg" alt="OGROFIT" class="brand-client">
+      </div>
+    </div>
+    <div class="nav-links" id="navLinks">
+      <a href="#v4">Quem somos</a>
+      <a href="#diagnosis">Diagnóstico</a>
+      <a href="#sistema">Sistema</a>
+      <a href="#timeline">Timeline</a>
+      <a href="#investment">Investimento</a>
+      <a href="#team">Equipe</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ============================================================ -->
+<!-- HERO -->
+<!-- ============================================================ -->
+<div class="hero">
+  <div class="hero-grid"></div>
+
+  <div class="hero-float hf-1">
+    <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+    Shark Pro no portfolio
+  </div>
+  <div class="hero-float hf-2">
+    <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+    Infraestrutura completa
+  </div>
+  <div class="hero-float hf-3">
+    <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+    R$8M+/mes em faturamento
+  </div>
+
+  <div class="hero-content">
+    <div class="hero-badge">Proposta exclusiva 2026</div>
+    <h1>Construir uma marca que o mercado <span>veja valor</span></h1>
+    <p class="hero-sub">Parceiro de construção de marca de legado para a OGROFIT. Estratégia, presença digital e canal próprio em um sistema integrado.</p>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <span class="num">30.000+</span>
+        <span class="label">Projetos V4</span>
+      </div>
+      <div class="hero-stat">
+        <span class="num">R$8M+</span>
+        <span class="label">Faturamento/mes</span>
+      </div>
+      <div class="hero-stat">
+        <span class="num">45-60</span>
+        <span class="label">Dias</span>
+      </div>
+      <div class="hero-stat">
+        <span class="num">3</span>
+        <span class="label">Frentes integradas</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-indicator">
+    <span>Scroll</span>
+    <div class="scroll-arrow"></div>
+  </div>
+</div>
+
+<hr class="section-divider">
+
+<!-- ============================================================ -->
+<!-- SECTION 2 - V4 CREDIBILITY -->
+<!-- ============================================================ -->
+<section id="v4">
+  <div class="container">
+    <div class="reveal">
+      <span class="section-label">Quem somos</span>
+      <h2 class="section-title">A maior assessoria de marketing é vendas da America Latina</h2>
+      <p class="section-desc">Mais de 30.000 projetos executados. Marcas que confiam na V4 para construir presença, estratégia e resultados reais.</p>
+    </div>
+    <div class="logo-marquee">
+      <div class="logo-track">
+        <!-- First set -->
+        <img src="https://vendas.v4company.com/wp-content/uploads/2023/02/Exame.svg" alt="Exame">
+        <img src="https://vendas.v4company.com/wp-content/uploads/2023/02/Smart-Fit.svg" alt="Smart Fit">
+        <img src="https://vendas.v4company.com/wp-content/uploads/2023/02/XPInc.svg" alt="XP Inc">
+        <img src="https://vendas.v4company.com/wp-content/uploads/2023/02/Spotify.svg" alt="Spotify">
+        <img src="https://vendas.v4company.com/wp-content/uploads/2023/02/ifood.svg" alt="iFood">
+        <img src="https://vendas.v4company.com/wp-content/uploads/2023/02/Carmen-Steffens.svg" alt="Carmen Steffens">
+        <img src="https://vendas.v4company.com/wp-content/uploads/2023/02/Lugano.svg" alt="Lugano">
+        <img src="https://vendas.v4company.com/wp-content/uploads/2023/02/Anhanguera.svg" alt="Anhanguera">
+        <img src="https://vendas.v4company.com/wp-content/uploads/2023/02/Colchoes-Ortobom.svg" alt="Ortobom">
+        <img src="https://vendas.v4company.com/wp-content/uploads/2023/02/Oral-Unic.svg" alt="Oral Unic">
+        <!-- Second set (duplicate for seamless loop) -->
+        <img src="https://vendas.v4company.com/wp-content/uploads/2023/02/Exame.svg" alt="Exame">
+        <img src="https://vendas.v4company.com/wp-content/uploads/2023/02/Smart-Fit.svg" alt="Smart Fit">
+        <img src="https://vendas.v4company.com/wp-content/uploads/2023/02/XPInc.svg" alt="XP Inc">
+        <img src="https://vendas.v4company.com/wp-content/uploads/2023/02/Spotify.svg" alt="Spotify">
+        <img src="https://vendas.v4company.com/wp-content/uploads/2023/02/ifood.svg" alt="iFood">
+        <img src="https://vendas.v4company.com/wp-content/uploads/2023/02/Carmen-Steffens.svg" alt="Carmen Steffens">
+        <img src="https://vendas.v4company.com/wp-content/uploads/2023/02/Lugano.svg" alt="Lugano">
+        <img src="https://vendas.v4company.com/wp-content/uploads/2023/02/Anhanguera.svg" alt="Anhanguera">
+        <img src="https://vendas.v4company.com/wp-content/uploads/2023/02/Colchoes-Ortobom.svg" alt="Ortobom">
+        <img src="https://vendas.v4company.com/wp-content/uploads/2023/02/Oral-Unic.svg" alt="Oral Unic">
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ============================================================ -->
+<!-- SECTION 3 - DIAGNOSIS -->
+<!-- ============================================================ -->
+<section id="diagnosis">
+  <div class="container">
+    <div class="reveal">
+      <span class="section-label">Diagnóstico</span>
+      <h2 class="section-title">Vocês já têm tudo. Só falta a direção.</h2>
+      <p class="section-desc">A OGROFIT não precisa de ajuda para vender. Precisa de estratégia para que o mercado veja o que vocês já sabem: essa marca nasceu para ser referência.</p>
+    </div>
+    <div class="grid-2 stagger">
+      <div class="card reveal" style="--i:0;border-top:3px solid var(--green)">
+        <div class="card-header">
+          <div class="card-icon" style="background:rgba(34,197,94,.1)">
+            <svg viewBox="0 0 24 24" style="stroke:var(--green)"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          </div>
+          <h3>O que vocês já têm</h3>
+        </div>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:10px">
+          <li style="font-size:14px;color:var(--gray);line-height:1.6;padding-left:16px;position:relative"><span style="position:absolute;left:0;color:var(--green)">&#10003;</span>ID visual é manual de marca prontos</li>
+          <li style="font-size:14px;color:var(--gray);line-height:1.6;padding-left:16px;position:relative"><span style="position:absolute;left:0;color:var(--green)">&#10003;</span>Loja conceito em construção (Tubarão/SC)</li>
+          <li style="font-size:14px;color:var(--gray);line-height:1.6;padding-left:16px;position:relative"><span style="position:absolute;left:0;color:var(--green)">&#10003;</span>2 designers + 1 filmmaker full-time</li>
+          <li style="font-size:14px;color:var(--gray);line-height:1.6;padding-left:16px;position:relative"><span style="position:absolute;left:0;color:var(--green)">&#10003;</span>Cadeia completa de fabricação via Polofit</li>
+          <li style="font-size:14px;color:var(--gray);line-height:1.6;padding-left:16px;position:relative"><span style="position:absolute;left:0;color:var(--green)">&#10003;</span>CD próprio + logística</li>
+          <li style="font-size:14px;color:var(--gray);line-height:1.6;padding-left:16px;position:relative"><span style="position:absolute;left:0;color:var(--green)">&#10003;</span>20+ contas ativas no Mercado Livre</li>
+          <li style="font-size:14px;color:var(--gray);line-height:1.6;padding-left:16px;position:relative"><span style="position:absolute;left:0;color:var(--green)">&#10003;</span>Capacidade imediata R$1M+/mes</li>
+        </ul>
+      </div>
+      <div class="card reveal" style="--i:1;border-top:3px solid var(--red)">
+        <div class="card-header">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+          </div>
+          <h3>O que falta construir</h3>
+        </div>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:10px">
+          <li style="font-size:14px;color:var(--gray);line-height:1.6;padding-left:16px;position:relative"><span style="position:absolute;left:0;color:var(--red)">&#8226;</span>Estratégia de marca é posicionamento</li>
+          <li style="font-size:14px;color:var(--gray);line-height:1.6;padding-left:16px;position:relative"><span style="position:absolute;left:0;color:var(--red)">&#8226;</span>Trafego pago para branding</li>
+          <li style="font-size:14px;color:var(--gray);line-height:1.6;padding-left:16px;position:relative"><span style="position:absolute;left:0;color:var(--red)">&#8226;</span>Presença digital estratégica além do ML</li>
+          <li style="font-size:14px;color:var(--gray);line-height:1.6;padding-left:16px;position:relative"><span style="position:absolute;left:0;color:var(--red)">&#8226;</span>Canal de vendas próprio (e-commerce)</li>
+          <li style="font-size:14px;color:var(--gray);line-height:1.6;padding-left:16px;position:relative"><span style="position:absolute;left:0;color:var(--red)">&#8226;</span>Direção é priorização (roadmap)</li>
+          <li style="font-size:14px;color:var(--gray);line-height:1.6;padding-left:16px;position:relative"><span style="position:absolute;left:0;color:var(--red)">&#8226;</span>Estratégia de conteúdo omnichannel</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="quote-block reveal" style="margin-top:40px">
+      <p>Eu não quero um milhão, eu não quero dois milhões. Eu quero equity, eu quero construir um negócio para ter marca, para ter valor.</p>
+      <cite>&#8212; Idealizador OGROFIT</cite>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ============================================================ -->
+<!-- SECTION 4 - BENCHMARKS -->
+<!-- ============================================================ -->
+<section>
+  <div class="container">
+    <div class="reveal">
+      <span class="section-label">Referências</span>
+      <h2 class="section-title">O universo que a OGROFIT quer habitar</h2>
+      <p class="section-desc">Entendemos as referências. Sabemos onde a marca quer chegar. Nossa estratégia está alinhada com esse nível de ambição.</p>
+    </div>
+    <div class="grid-5 stagger">
+      <div class="benchmark-card reveal" style="--i:0">
+        <div class="benchmark-top"></div>
+        <div class="benchmark-body">
+          <div class="benchmark-name">Chanel</div>
+          <div class="benchmark-context">Referência de aspiração de luxo do idealizador</div>
+        </div>
+      </div>
+      <div class="benchmark-card reveal" style="--i:1">
+        <div class="benchmark-top"></div>
+        <div class="benchmark-body">
+          <div class="benchmark-name">Cariani</div>
+          <div class="benchmark-context">Modelo de vlog/YouTube — contar a historia do fundador</div>
+        </div>
+      </div>
+      <div class="benchmark-card reveal" style="--i:2">
+        <div class="benchmark-top"></div>
+        <div class="benchmark-body">
+          <div class="benchmark-name">Toguro</div>
+          <div class="benchmark-context">Modelo de conteúdo fitness é lifestyle</div>
+        </div>
+      </div>
+      <div class="benchmark-card reveal" style="--i:3">
+        <div class="benchmark-top"></div>
+        <div class="benchmark-body">
+          <div class="benchmark-name">Minimal</div>
+          <div class="benchmark-context">Amigos pessoais — referência de marca fitness premium</div>
+        </div>
+      </div>
+      <div class="benchmark-card reveal" style="--i:4">
+        <div class="benchmark-top"></div>
+        <div class="benchmark-body">
+          <div class="benchmark-name">Shark Pro</div>
+          <div class="benchmark-context">Parceria estratégica para produção de suplementação</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ============================================================ -->
+<!-- SECTION 5 - ECOSYSTEM VISION -->
+<!-- ============================================================ -->
+<div class="eco-section-wrap">
+  <div class="container">
+    <div class="eco-layout">
+      <div class="eco-text reveal">
+        <span class="section-label">Visao de futuro</span>
+        <h2 class="eco-title">Um ecossistema fitness <span style="color:var(--red)">completo</span></h2>
+        <p class="eco-desc">De têxtil a suplementação, de máquinas a alimentação. 4 fases de expansão para construir um império de marca no universo fitness.</p>
+        <div style="display:flex;flex-direction:column;gap:16px;margin-top:32px">
+          <div class="exec-box" style="padding:16px 20px">
+            <h3 style="font-size:14px;margin-bottom:4px"><span style="color:var(--red);font-family:var(--font-mono)">01</span> Roupa fitness (têxtil)</h3>
+            <p style="font-size:13px;margin:0">Ponto de partida — fabricação via Polofit</p>
+          </div>
+          <div class="exec-box" style="padding:16px 20px">
+            <h3 style="font-size:14px;margin-bottom:4px"><span style="color:var(--red);font-family:var(--font-mono)">02</span> Suplementação</h3>
+            <p style="font-size:13px;margin:0">Em negociação — conexão com Shark Pro</p>
+          </div>
+          <div class="exec-box" style="padding:16px 20px">
+            <h3 style="font-size:14px;margin-bottom:4px"><span style="color:var(--red);font-family:var(--font-mono)">03</span> Máquinas de academia</h3>
+            <p style="font-size:13px;margin:0">Pipeline — parceria com top 5 do Brasil</p>
+          </div>
+          <div class="exec-box" style="padding:16px 20px">
+            <h3 style="font-size:14px;margin-bottom:4px"><span style="color:var(--red);font-family:var(--font-mono)">04</span> Fit barrinha</h3>
+            <p style="font-size:13px;margin:0">Expansão futura</p>
+          </div>
+        </div>
+      </div>
+      <div class="eco-visual reveal-scale">
+        <div class="eco-rings">
+          <div class="eco-ring eco-ring-1"></div>
+          <div class="eco-ring eco-ring-2"></div>
+          <div class="eco-ring eco-ring-3"></div>
+          <div class="eco-ring eco-ring-4"></div>
+          <div class="eco-center">
+            <img src="logo-ogrofit.jpg" alt="OGROFIT" style="width:36px;height:36px;object-fit:contain">
+          </div>
+          <span class="eco-ring-label eco-ring-label-1">Fit barrinha</span>
+          <span class="eco-ring-label eco-ring-label-2">Máquinas</span>
+          <span class="eco-ring-label eco-ring-label-3">Suplementação</span>
+          <span class="eco-ring-label eco-ring-label-4">Têxtil</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr class="section-divider">
+
+<!-- ============================================================ -->
+<!-- PHASE TRANSITION -->
+<!-- ============================================================ -->
+<div class="phase-transition">
+  <span class="tag tag-red">Nossa proposta</span>
+  <h3>3 frentes. 1 sistema. Uma marca de legado.</h3>
+</div>
+
+<hr class="section-divider">
+
+<!-- ============================================================ -->
+<!-- SECTION 6 - SYSTEM OVERVIEW -->
+<!-- ============================================================ -->
+<section id="sistema">
+  <div class="container">
+    <div class="reveal">
+      <span class="section-label">O sistema</span>
+      <h2 class="section-title">Não são 3 produtos separados. É um sistema de construção de marca.</h2>
+      <p class="section-desc">Três frentes trabalhando simultaneamente para que, em 45-60 dias, a OGROFIT tenha estratégia, presença digital e canal próprio operando.</p>
+    </div>
+    <div class="grid-3 stagger">
+      <div class="system-card system-card--red reveal" style="--i:0">
+        <div class="system-top system-top--red"></div>
+        <div class="system-body">
+          <div class="system-num system-num--red">01</div>
+          <div class="system-nickname system-nickname--red">O mapa</div>
+          <div class="system-title">Estruturação estratégica</div>
+          <div class="system-desc">Pesquisa, posicionamento, go-to-market e forecast. O roadmap que transforma ideias em direção.</div>
+          <div class="system-meta">
+            <span class="tag tag-red">5 semanas</span>
+            <span class="tag tag-red">Estratégia</span>
+          </div>
+        </div>
+      </div>
+      <div class="system-card system-card--emerald reveal" style="--i:1">
+        <div class="system-top system-top--emerald"></div>
+        <div class="system-body">
+          <div class="system-num system-num--emerald">02</div>
+          <div class="system-nickname system-nickname--emerald">A presença</div>
+          <div class="system-title">Redes sociais</div>
+          <div class="system-desc">Diagnóstico, planejamento editorial é key visuals. A marca em todos os canais com estratégia.</div>
+          <div class="system-meta">
+            <span class="tag tag-green">4 semanas</span>
+            <span class="tag tag-green">Social</span>
+          </div>
+        </div>
+      </div>
+      <div class="system-card system-card--gold reveal" style="--i:2">
+        <div class="system-top system-top--gold"></div>
+        <div class="system-body">
+          <div class="system-num system-num--gold">03</div>
+          <div class="system-nickname system-nickname--gold">O canal</div>
+          <div class="system-title">E-commerce</div>
+          <div class="system-desc">Loja completa com branding, SEO e integrações. A casa própria da marca no digital.</div>
+          <div class="system-meta">
+            <span class="tag tag-gold">5 semanas</span>
+            <span class="tag tag-gold">Loja</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ============================================================ -->
+<!-- SECTION 7 - PRODUTO 1: ESTRUTURAÇÃO ESTRATÉGICA -->
+<!-- ============================================================ -->
+<section id="estratégia">
+  <div class="container">
+    <div class="reveal">
+      <span class="section-label">Frente 01 — O mapa</span>
+      <h2 class="section-title">Estruturação estratégica</h2>
+    </div>
+    <div class="product-card reveal">
+      <div class="product-card-top"></div>
+      <div class="product-card-body">
+        <div class="product-meta">
+          <span class="tag tag-red">Estratégia</span>
+          <span class="product-meta-item">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            5 semanas
+          </span>
+        </div>
+        <p style="font-size:15px;color:var(--gray);line-height:1.8">Solução consultiva voltada a empresas que ainda não possuem uma estratégia digital estruturada. Pesquisa de mercado, posicionamento, mapeamento de ativos, diagnóstico comercial e go-to-market com priorização de canais.</p>
+      </div>
+    </div>
+
+
+    <!-- Timeline Visual Cards -->
+    <div class="tl-panel reveal">
+      <div class="tl-cards" style="--tl-cols:5">
+        <div class="tl-card">
+          <div class="tl-card-label">Semana 1</div>
+          <div class="tl-card-title">Preparação e Imersão</div>
+          <div class="tl-card-desc">Canal oficial, formulário de dados, alinhamento de expectativas e acessos.</div>
+        </div>
+        <div class="tl-card">
+          <div class="tl-card-label">Semana 2</div>
+          <div class="tl-card-title">Pesquisa e Posicionamento</div>
+          <div class="tl-card-desc">TAM/SAM/SOM, ICPs, personas, Jobs To Be Done e PUV.</div>
+        </div>
+        <div class="tl-card">
+          <div class="tl-card-label">Semana 3</div>
+          <div class="tl-card-title">Ativos e Mídia</div>
+          <div class="tl-card-desc">Meta/Google Ads, performance, CRO, benchmarking e planos de otimização.</div>
+        </div>
+        <div class="tl-card">
+          <div class="tl-card-label">Semana 4</div>
+          <div class="tl-card-title">Mapeamento Comercial</div>
+          <div class="tl-card-desc">Análise da operação, cliente oculto e plano de eficiência comercial.</div>
+        </div>
+        <div class="tl-card">
+          <div class="tl-card-label">Semana 5</div>
+          <div class="tl-card-title">Tração e Entrega</div>
+          <div class="tl-card-desc">Go-to-market, manual de copy, forecast de mídia para 3 meses.</div>
+        </div>
+      </div>
+      <div class="tl-track" aria-hidden="true">
+        <span class="tl-node">1</span><span class="tl-connector"></span>
+        <span class="tl-node">2</span><span class="tl-connector"></span>
+        <span class="tl-node">3</span><span class="tl-connector"></span>
+        <span class="tl-node">4</span><span class="tl-connector"></span>
+        <span class="tl-node">5</span>
+      </div>
+      <p class="tl-footer">Ao final: roadmap completo, go-to-market validado e forecast de mídia para 3 meses.</p>
+    </div>
+
+    <div style="margin-top:24px">
+      <div class="accordion-group reveal">
+        <button class="accordion-trigger" aria-expanded="false">
+          <div style="display:flex;align-items:center;gap:12px">
+            <span class="week-dot"></span>
+            <span>Semana 1 — Preparação</span>
+            <span class="week-count">(4 entregas)</span>
+          </div>
+          <svg class="chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="accordion-content">
+          <div style="padding:16px 24px 24px">
+            <div class="data-table-wrap">
+              <table>
+                <thead><tr><th>Entrega</th></tr></thead>
+                <tbody>
+                  <tr><td>Abertura do canal de comunicação oficial</td></tr>
+                  <tr><td>Imersão de dados via formulário V4 Marketing</td></tr>
+                  <tr><td>Reuniao de alinhamento de expectativas e cronograma</td></tr>
+                  <tr><td>Solicitação de acesso a canais, gerenciadores é ferramentas</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-group reveal">
+        <button class="accordion-trigger" aria-expanded="false">
+          <div style="display:flex;align-items:center;gap:12px">
+            <span class="week-dot"></span>
+            <span>Semana 2 — Pesquisa e posicionamento</span>
+            <span class="week-count">(4 entregas)</span>
+          </div>
+          <svg class="chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="accordion-content">
+          <div style="padding:16px 24px 24px">
+            <div class="data-table-wrap">
+              <table>
+                <thead><tr><th>Entrega</th></tr></thead>
+                <tbody>
+                  <tr><td>Sizing de mercado (TAM/SAM/SOM) é análise de competidores</td></tr>
+                  <tr><td>Mapeamento de ICPs, comites de compra é personas (B2C)</td></tr>
+                  <tr><td>Análise Jobs To Be Done</td></tr>
+                  <tr><td>Comparativo de solucoes é Proposta Unica de Valor (PUV)</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-group reveal">
+        <button class="accordion-trigger" aria-expanded="false">
+          <div style="display:flex;align-items:center;gap:12px">
+            <span class="week-dot"></span>
+            <span>Semana 3 — Mapeamento de ativos e mídia</span>
+            <span class="week-count">(4 entregas)</span>
+          </div>
+          <svg class="chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="accordion-content">
+          <div style="padding:16px 24px 24px">
+            <div class="data-table-wrap">
+              <table>
+                <thead><tr><th>Entrega</th></tr></thead>
+                <tbody>
+                  <tr><td>Mapeamento técnico de Meta Ads é Google Ads (ate 5 segmentos)</td></tr>
+                  <tr><td>Análise de performance é benchmarking criativo</td></tr>
+                  <tr><td>Análise de CRO (narrativa, copy, usabilidade) + cliente oculto</td></tr>
+                  <tr><td>Planos de otimização: roteiros de ação, 3 modelos criativos, wireframe LP</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-group reveal">
+        <button class="accordion-trigger" aria-expanded="false">
+          <div style="display:flex;align-items:center;gap:12px">
+            <span class="week-dot"></span>
+            <span>Semana 4 — Mapeamento comercial</span>
+            <span class="week-count">(3 entregas)</span>
+          </div>
+          <svg class="chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="accordion-content">
+          <div style="padding:16px 24px 24px">
+            <div class="data-table-wrap">
+              <table>
+                <thead><tr><th>Entrega</th></tr></thead>
+                <tbody>
+                  <tr><td>Análise comportamental é tecnica da operação comercial</td></tr>
+                  <tr><td>Teste via cliente oculto para mapear experiência de compra</td></tr>
+                  <tr><td>Plano de eficiência comercial (tempo de resposta, taxa de fechamento)</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-group reveal">
+        <button class="accordion-trigger" aria-expanded="false">
+          <div style="display:flex;align-items:center;gap:12px">
+            <span class="week-dot"></span>
+            <span>Semana 5 — Estratégia de tração e entrega</span>
+            <span class="week-count">(3 entregas)</span>
+          </div>
+          <svg class="chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="accordion-content">
+          <div style="padding:16px 24px 24px">
+            <div class="data-table-wrap">
+              <table>
+                <thead><tr><th>Entrega</th></tr></thead>
+                <tbody>
+                  <tr><td>Go-to-market: matriz de priorização de canais é fluxos táticos (AEMR)</td></tr>
+                  <tr><td>Manual de copy (tom de voz) é identidade visual</td></tr>
+                  <tr><td>Forecast de mídia para 3 meses + reunião de entrega</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="exec-box reveal" style="margin-top:24px">
+      <h3>Entregável-chave</h3>
+      <p>Matriz de priorização de canais + forecast 3 meses. Resolve diretamente a dor: "eu não sei por onde começar."</p>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ============================================================ -->
+<!-- SECTION 8 - PRODUTO 2: REDES SOCIAIS -->
+<!-- ============================================================ -->
+<section id="social">
+  <div class="container">
+    <div class="reveal">
+      <span class="section-label" style="color:var(--green)">Frente 02 — A presença</span>
+      <h2 class="section-title">Estruturação estratégica em redes sociais</h2>
+    </div>
+    <div class="product-card reveal">
+      <div class="product-card-top product-card-top--emerald"></div>
+      <div class="product-card-body">
+        <div class="product-meta">
+          <span class="tag tag-green">Social</span>
+          <span class="product-meta-item">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            4 semanas
+          </span>
+        </div>
+        <p style="font-size:15px;color:var(--gray);line-height:1.8">Solução consultiva voltada a empresas que desejam estruturar sua presença digital com base em dados e estratégia. Diagnóstico completo das redes sociais, avaliando identidade visual, tom de voz, desempenho, concorrência e comportamento do público.</p>
+      </div>
+    </div>
+
+
+    <!-- Timeline Visual Cards -->
+    <div class="tl-panel reveal">
+      <div class="tl-cards" style="--tl-cols:4">
+        <div class="tl-card tl-card--emerald">
+          <div class="tl-card-label">Semana 1</div>
+          <div class="tl-card-title">Preparação</div>
+          <div class="tl-card-desc">Canal direto, formulário de imersão, Mlabs e acessos às redes.</div>
+        </div>
+        <div class="tl-card tl-card--emerald">
+          <div class="tl-card-label">Semana 2</div>
+          <div class="tl-card-title">Diagnóstico Completo</div>
+          <div class="tl-card-desc">Benchmarking, social listening, auditoria de métricas e análise editorial.</div>
+        </div>
+        <div class="tl-card tl-card--emerald">
+          <div class="tl-card-label">Semana 3</div>
+          <div class="tl-card-title">Planejamento Editorial</div>
+          <div class="tl-card-desc">Metas SMART, pilares de conteúdo, cronograma, pautas e key visuals.</div>
+        </div>
+        <div class="tl-card tl-card--emerald">
+          <div class="tl-card-label">Semana 4</div>
+          <div class="tl-card-title">Entregas Finais</div>
+          <div class="tl-card-desc">Manual de copy, ajustes finos, aprovação final e pesquisa NPS.</div>
+        </div>
+      </div>
+      <div class="tl-track" aria-hidden="true">
+        <span class="tl-node tl-node--emerald">1</span><span class="tl-connector tl-connector--emerald"></span>
+        <span class="tl-node tl-node--emerald">2</span><span class="tl-connector tl-connector--emerald"></span>
+        <span class="tl-node tl-node--emerald">3</span><span class="tl-connector tl-connector--emerald"></span>
+        <span class="tl-node tl-node--emerald">4</span>
+      </div>
+      <p class="tl-footer">Ao final: linha editorial, cronograma, key visuals e manual de copy prontos.</p>
+    </div>
+
+    <div style="margin-top:24px">
+      <div class="accordion-group reveal">
+        <button class="accordion-trigger" aria-expanded="false">
+          <div style="display:flex;align-items:center;gap:12px">
+            <span class="week-dot week-dot--emerald"></span>
+            <span>Semana 1 — Preparação</span>
+            <span class="week-count">(3 entregas)</span>
+          </div>
+          <svg class="chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="accordion-content">
+          <div style="padding:16px 24px 24px">
+            <div class="data-table-wrap">
+              <table>
+                <thead><tr><th>Entrega</th></tr></thead>
+                <tbody>
+                  <tr><td>Canal de comunicação direto + kick-off</td></tr>
+                  <tr><td>Formulário de imersao + alinhamento de cronograma</td></tr>
+                  <tr><td>Contratação de Mlabs + acesso a todas as redes</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-group reveal">
+        <button class="accordion-trigger" aria-expanded="false">
+          <div style="display:flex;align-items:center;gap:12px">
+            <span class="week-dot week-dot--emerald"></span>
+            <span>Semana 2 — Diagnóstico</span>
+            <span class="week-count">(6 entregas)</span>
+          </div>
+          <svg class="chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="accordion-content">
+          <div style="padding:16px 24px 24px">
+            <div class="data-table-wrap">
+              <table>
+                <thead><tr><th>Entrega</th></tr></thead>
+                <tbody>
+                  <tr><td>Benchmarking: 3 concorrentes em 3 canais distintos</td></tr>
+                  <tr><td>Análise da jornada do consumidor + social listening</td></tr>
+                  <tr><td>Auditoria de métricas (engajamento, alcance, seguidores)</td></tr>
+                  <tr><td>Análise criativa é editorial (ID visual, tom de voz)</td></tr>
+                  <tr><td>Análise de funil de conteúdo (atração, consideração, conversao)</td></tr>
+                  <tr><td>Avaliação de campanhas passadas (orgânicas é pagas)</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-group reveal">
+        <button class="accordion-trigger" aria-expanded="false">
+          <div style="display:flex;align-items:center;gap:12px">
+            <span class="week-dot week-dot--emerald"></span>
+            <span>Semana 3 — Planejamento</span>
+            <span class="week-count">(6 entregas)</span>
+          </div>
+          <svg class="chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="accordion-content">
+          <div style="padding:16px 24px 24px">
+            <div class="data-table-wrap">
+              <table>
+                <thead><tr><th>Entrega</th></tr></thead>
+                <tbody>
+                  <tr><td>Metas SMART para social</td></tr>
+                  <tr><td>Estratégia de redes, tom de voz é posicionamento digital</td></tr>
+                  <tr><td>Linha editorial: temas macro é pilares de conteúdo</td></tr>
+                  <tr><td>Canais prioritários, formatos é frequência de postagens</td></tr>
+                  <tr><td>Cronograma editorial + pautas + key visuals (KV)</td></tr>
+                  <tr><td>Apresentação da estratégia para validação</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-group reveal">
+        <button class="accordion-trigger" aria-expanded="false">
+          <div style="display:flex;align-items:center;gap:12px">
+            <span class="week-dot week-dot--emerald"></span>
+            <span>Semana 4 — Entregas finais</span>
+            <span class="week-count">(3 entregas)</span>
+          </div>
+          <svg class="chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="accordion-content">
+          <div style="padding:16px 24px 24px">
+            <div class="data-table-wrap">
+              <table>
+                <thead><tr><th>Entrega</th></tr></thead>
+                <tbody>
+                  <tr><td>Manual de copy (legendas, FAQ, emojis, hashtags)</td></tr>
+                  <tr><td>Ajustes finos no planejamento (feedback do cliente)</td></tr>
+                  <tr><td>Aprovação final, encerramento é pesquisa NPS</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="exec-box reveal" style="margin-top:24px;border-left-color:var(--green)">
+      <div style="position:absolute;top:0;left:0;width:4px;height:100%;background:var(--green)"></div>
+      <h3>Entregável-chave</h3>
+      <p>Linha editorial + cronograma + key visuals. Da clareza total ao filmmaker e aos designers que vocês já têm.</p>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ============================================================ -->
+<!-- SECTION 9 - PRODUTO 3: E-COMMERCE -->
+<!-- ============================================================ -->
+<section id="ecommerce">
+  <div class="container">
+    <div class="reveal">
+      <span class="section-label" style="color:var(--gold)">Frente 03 — O canal</span>
+      <h2 class="section-title">E-commerce</h2>
+    </div>
+    <div class="product-card reveal">
+      <div class="product-card-top product-card-top--gold"></div>
+      <div class="product-card-body">
+        <div class="product-meta">
+          <span class="tag tag-gold">Loja</span>
+          <span class="product-meta-item">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            5 semanas
+          </span>
+        </div>
+        <p style="font-size:15px;color:var(--gray);line-height:1.8">Implementação de ecossistema de e-commerce de alta performance, focado em SEO e experiência do usuário. Consolidar a autoridade digital da OGROFIT, transformando a plataforma em canal estratégico de vendas e fortalecimento de marca no nicho fitness.</p>
+      </div>
+    </div>
+
+
+    <!-- Timeline Visual Cards -->
+    <div class="tl-panel reveal">
+      <div class="tl-cards" style="--tl-cols:5">
+        <div class="tl-card tl-card--gold">
+          <div class="tl-card-label">Semana 1</div>
+          <div class="tl-card-title">Planejamento e Onboarding</div>
+          <div class="tl-card-desc">Kick-off, coleta de acessos, arquitetura UX e wireframe.</div>
+        </div>
+        <div class="tl-card tl-card--gold">
+          <div class="tl-card-label">Semana 2</div>
+          <div class="tl-card-title">Configuração Estrutural</div>
+          <div class="tl-card-desc">Plataforma, domínio, SSL, tema, checkout e ERP Bling.</div>
+        </div>
+        <div class="tl-card tl-card--gold">
+          <div class="tl-card-label">Semana 3</div>
+          <div class="tl-card-title">Conteúdo e Identidade</div>
+          <div class="tl-card-desc">Frete, produtos, SEO, branding aplicado e montagem da home.</div>
+        </div>
+        <div class="tl-card tl-card--gold">
+          <div class="tl-card-label">Semana 4</div>
+          <div class="tl-card-title">Integrações e QA</div>
+          <div class="tl-card-desc">Pixels, GA4, GTM, catálogo social, testes e revisão técnica.</div>
+        </div>
+        <div class="tl-card tl-card--gold">
+          <div class="tl-card-label">Semana 5</div>
+          <div class="tl-card-title">Publicação e Go-Live</div>
+          <div class="tl-card-desc">Aprovação final, publicação oficial e monitoramento pós-lançamento.</div>
+        </div>
+      </div>
+      <div class="tl-track" aria-hidden="true">
+        <span class="tl-node tl-node--gold">1</span><span class="tl-connector tl-connector--gold"></span>
+        <span class="tl-node tl-node--gold">2</span><span class="tl-connector tl-connector--gold"></span>
+        <span class="tl-node tl-node--gold">3</span><span class="tl-connector tl-connector--gold"></span>
+        <span class="tl-node tl-node--gold">4</span><span class="tl-connector tl-connector--gold"></span>
+        <span class="tl-node tl-node--gold">5</span>
+      </div>
+      <p class="tl-footer">Ao final: loja completa no ar com branding, SEO, integrações e monitoramento ativo.</p>
+    </div>
+
+    <div style="margin-top:24px">
+      <div class="accordion-group reveal">
+        <button class="accordion-trigger" aria-expanded="false">
+          <div style="display:flex;align-items:center;gap:12px">
+            <span class="week-dot week-dot--gold"></span>
+            <span>Semana 1 — Planejamento e onboarding</span>
+            <span class="week-count">(4 entregas)</span>
+          </div>
+          <svg class="chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="accordion-content">
+          <div style="padding:16px 24px 24px">
+            <div class="data-table-wrap">
+              <table>
+                <thead><tr><th>Entrega</th></tr></thead>
+                <tbody>
+                  <tr><td>Abertura do projeto + boas-vindas</td></tr>
+                  <tr><td>Kick-off é alinhamento de expectativas</td></tr>
+                  <tr><td>Coleta de acessos a canais é ferramentas</td></tr>
+                  <tr><td>Arquitetura de layout (UX), wireframe (home + produto), aprovação</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-group reveal">
+        <button class="accordion-trigger" aria-expanded="false">
+          <div style="display:flex;align-items:center;gap:12px">
+            <span class="week-dot week-dot--gold"></span>
+            <span>Semana 2 — Configuração e personalização</span>
+            <span class="week-count">(5 entregas)</span>
+          </div>
+          <svg class="chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="accordion-content">
+          <div style="padding:16px 24px 24px">
+            <div class="data-table-wrap">
+              <table>
+                <thead><tr><th>Entrega</th></tr></thead>
+                <tbody>
+                  <tr><td>Setup: plataforma, dominio, hospedagem, SSL</td></tr>
+                  <tr><td>Escolha é preparação do tema base</td></tr>
+                  <tr><td>Customização: blocos, home page, paginas de produto, categorias</td></tr>
+                  <tr><td>Checkout + integração ERP (Bling), NCMs, categorias</td></tr>
+                  <tr><td>Configuração é testes do gateway de pagamento</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-group reveal">
+        <button class="accordion-trigger" aria-expanded="false">
+          <div style="display:flex;align-items:center;gap:12px">
+            <span class="week-dot week-dot--gold"></span>
+            <span>Semana 3 — Conteúdo é identidade</span>
+            <span class="week-count">(5 entregas)</span>
+          </div>
+          <svg class="chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="accordion-content">
+          <div style="padding:16px 24px 24px">
+            <div class="data-table-wrap">
+              <table>
+                <thead><tr><th>Entrega</th></tr></thead>
+                <tbody>
+                  <tr><td>Estratégia de frete (fixo, gratis, regional) + transportadoras</td></tr>
+                  <tr><td>Taxonomia, fotos/videos, descrições SEO/conversao</td></tr>
+                  <tr><td>Cadastro de produtos/variações, estoque, politicas de troca</td></tr>
+                  <tr><td>Branding aplicado (logos, banners, vitrine) + montagem da home</td></tr>
+                  <tr><td>SEO básico + e-mails transacionais</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-group reveal">
+        <button class="accordion-trigger" aria-expanded="false">
+          <div style="display:flex;align-items:center;gap:12px">
+            <span class="week-dot week-dot--gold"></span>
+            <span>Semana 4 — Integrações e qualidade</span>
+            <span class="week-count">(4 entregas)</span>
+          </div>
+          <svg class="chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="accordion-content">
+          <div style="padding:16px 24px 24px">
+            <div class="data-table-wrap">
+              <table>
+                <thead><tr><th>Entrega</th></tr></thead>
+                <tbody>
+                  <tr><td>Pixels (Meta, Google, TikTok), GA4, Tag Manager, Google Merchant Center</td></tr>
+                  <tr><td>Integração catalogo Facebook/Instagram é marketplaces</td></tr>
+                  <tr><td>Testes: jornada de compra, pagamento, frete, responsividade</td></tr>
+                  <tr><td>Revisao tecnica: checklist de performance, velocidade, UX</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-group reveal">
+        <button class="accordion-trigger" aria-expanded="false">
+          <div style="display:flex;align-items:center;gap:12px">
+            <span class="week-dot week-dot--gold"></span>
+            <span>Semana 5 — Publicação e monitoramento</span>
+            <span class="week-count">(2 entregas)</span>
+          </div>
+          <svg class="chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="accordion-content">
+          <div style="padding:16px 24px 24px">
+            <div class="data-table-wrap">
+              <table>
+                <thead><tr><th>Entrega</th></tr></thead>
+                <tbody>
+                  <tr><td>Aprovação final + publicação oficial da loja</td></tr>
+                  <tr><td>Monitoramento pos-lancamento de pedidos em tempo real</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="exec-box reveal" style="margin-top:24px">
+      <div style="position:absolute;top:0;left:0;width:4px;height:100%;background:var(--gold)"></div>
+      <h3>Entregável-chave</h3>
+      <p>Loja completa com branding aplicado, SEO e integração com redes sociais. O e-commerce vira extensão da identidade da marca.</p>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ============================================================ -->
+<!-- SECTION 10 - GANTT TIMELINE -->
+<!-- ============================================================ -->
+<section id="timeline">
+  <div class="container">
+    <div class="reveal">
+      <span class="section-label">Timeline integrada</span>
+      <h2 class="section-title">3 frentes. 45-60 dias. Tudo operando.</h2>
+      <p class="section-desc">As três frentes rodam em paralelo. Em aproximadamente 60 dias, a OGROFIT terá estratégia definida, redes planejadas é loja no ar.</p>
+    </div>
+
+    <div class="gantt-container reveal">
+      <div class="gantt-grid">
+        <!-- Header -->
+        <div class="gantt-header" style="border-bottom:none"></div>
+        <div class="gantt-header">S1</div>
+        <div class="gantt-header">S2</div>
+        <div class="gantt-header">S3</div>
+        <div class="gantt-header">S4</div>
+        <div class="gantt-header">S5</div>
+        <div class="gantt-header">S6</div>
+        <div class="gantt-header">S7</div>
+        <div class="gantt-header">S8</div>
+
+        <!-- Row 1: Estratégia -->
+        <div class="gantt-label"><span style="color:var(--red)">&#9679;</span> Estruturação estratégica</div>
+        <div class="gantt-cell" style="grid-column:2/7">
+          <div class="gantt-bar gantt-bar--red">5 semanas</div>
+        </div>
+        <div class="gantt-cell" style="grid-column:7/10"></div>
+
+        <!-- Row 2: Social -->
+        <div class="gantt-label"><span style="color:var(--green)">&#9679;</span> Redes sociais</div>
+        <div class="gantt-cell" style="grid-column:2/6">
+          <div class="gantt-bar gantt-bar--emerald">4 semanas</div>
+        </div>
+        <div class="gantt-cell" style="grid-column:6/10"></div>
+
+        <!-- Row 3: E-commerce -->
+        <div class="gantt-label"><span style="color:var(--gold)">&#9679;</span> E-commerce</div>
+        <div class="gantt-cell" style="grid-column:2/2"></div>
+        <div class="gantt-cell" style="grid-column:3/8">
+          <div class="gantt-bar gantt-bar--gold">5 semanas</div>
+        </div>
+        <div class="gantt-cell" style="grid-column:8/10"></div>
+      </div>
+
+      <div style="text-align:center;margin-top:24px;padding-top:20px;border-top:1px solid var(--surface-lt)">
+        <span style="font-family:var(--font-mono);font-size:20px;font-weight:700;color:var(--white)">45-60 dias corridos</span>
+        <p style="font-size:14px;color:var(--gray);margin-top:4px">Prazo total estimado com as 3 frentes em paralelo</p>
+      </div>
+    </div>
+
+    <div class="exec-highlight reveal" style="margin-top:32px">
+      <div class="exec-box">
+        <h3 style="color:var(--red)">Ao final da frente 01</h3>
+        <p>Roadmap completo, go-to-market validado é forecast de mídia para 3 meses.</p>
+      </div>
+      <div class="exec-box">
+        <div style="position:absolute;top:0;left:0;width:4px;height:100%;background:var(--green)"></div>
+        <h3 style="color:var(--green)">Ao final da frente 02</h3>
+        <p>Estratégia de redes definida, cronograma editorial é key visuals prontos.</p>
+      </div>
+      <div class="exec-box">
+        <div style="position:absolute;top:0;left:0;width:4px;height:100%;background:var(--gold)"></div>
+        <h3 style="color:var(--gold)">Ao final da frente 03</h3>
+        <p>E-commerce no ar com branding, SEO, integrações é monitoramento ativo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ============================================================ -->
+<!-- SECTION 11 - INVESTMENT -->
+<!-- ============================================================ -->
+<section id="investment" style="padding:80px 0">
+  <div class="container">
+    <div class="reveal" style="text-align:center;margin-bottom:48px">
+      <span class="section-label" style="justify-content:center">Investimento</span>
+      <h2 class="section-title" style="text-align:center">Investimento na construção da marca</h2>
+      <p class="section-desc" style="text-align:center;margin:16px auto 0">Para direcionar uma marca que já fatura R$8M+/mes. Não é custo — é o alicerce do legado.</p>
+    </div>
+
+    <div class="offer-grid reveal">
+      <!-- Offer 1: Estruturacoes -->
+      <div class="offer-card">
+        <div class="offer-inner">
+          <div style="margin-bottom:24px"><span class="offer-badge">Estruturacoes</span></div>
+          <div style="font-size:13px;color:var(--gray);margin-bottom:8px;position:relative;z-index:1">Marketing, vendas e social media</div>
+          <div class="offer-price">R$&nbsp;40.000</div>
+          <div class="offer-price-secondary">à vista (pix ou boleto) — ou R$ 45.000 em até 8x cartão / 3x boleto</div>
+
+          <div style="margin:24px 0;padding:0 8px;position:relative;z-index:1">
+            <div class="offer-check">
+              <div class="offer-check-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+              Estruturação estratégica completa (5 sem)
+            </div>
+            <div class="offer-check">
+              <div class="offer-check-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+              Estruturação de redes sociais (4 sem)
+            </div>
+            <div class="offer-check">
+              <div class="offer-check-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+              Go-to-market + forecast 3 meses
+            </div>
+            <div class="offer-check">
+              <div class="offer-check-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+              Manuais de copy e identidade visual
+            </div>
+            <div class="offer-check">
+              <div class="offer-check-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+              Cronograma editorial + key visuals
+            </div>
+          </div>
+
+          <div style="margin-top:24px;position:relative;z-index:1">
+            <a href="https://wa.me/5511958326644" target="_blank" rel="noopener" class="offer-cta">Avançar com a V4 Company</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Offer 2: E-commerce -->
+      <div class="offer-card offer-card--gold">
+        <div class="offer-inner">
+          <div style="margin-bottom:24px"><span class="offer-badge offer-badge--gold">E-commerce</span></div>
+          <div style="font-size:13px;color:var(--gray);margin-bottom:8px;position:relative;z-index:1">Construção de loja profissional</div>
+          <div class="offer-price" style="font-size:clamp(28px,4vw,40px)">Setup gratuito</div>
+          <div class="offer-price-secondary">8% do faturamento bruto durante uso da plataforma</div>
+
+          <div style="margin:24px 0;padding:0 8px;position:relative;z-index:1">
+            <div class="offer-check">
+              <div class="offer-check-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+              Loja completa com branding aplicado
+            </div>
+            <div class="offer-check">
+              <div class="offer-check-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+              SEO básico + descrições otimizadas
+            </div>
+            <div class="offer-check">
+              <div class="offer-check-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+              Integracoes: pixels, GA4, GTM, catalogo
+            </div>
+            <div class="offer-check">
+              <div class="offer-check-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+              Checkout + ERP (Bling) + gateway
+            </div>
+            <div class="offer-check">
+              <div class="offer-check-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+              Monitoramento pos-lancamento
+            </div>
+          </div>
+
+          <div style="font-size:13px;color:var(--gold);font-weight:600;position:relative;z-index:1;margin-top:8px">A gente ganha quando vocês ganham.</div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ============================================================ -->
+<!-- SECTION 12 - TEAM -->
+<!-- ============================================================ -->
+<section id="team">
+  <div class="container">
+    <div class="reveal">
+      <span class="section-label">Equipe</span>
+      <h2 class="section-title">Quem vai construir com vocês</h2>
+      <p class="section-desc">Especialistas dedicados a cada frente do projeto, trabalhando de forma integrada.</p>
+    </div>
+    <div class="grid-4 stagger">
+      <div class="team-card reveal" style="--i:0">
+        <div class="team-icon">
+          <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </div>
+        <div class="team-name">Ricardo Baziotti</div>
+        <div class="team-role">Identidade, UX é design</div>
+        <span class="tag tag-red" style="margin-top:8px">Lider visual</span>
+      </div>
+      <div class="team-card reveal" style="--i:1">
+        <div class="team-icon">
+          <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </div>
+        <div class="team-name">Thiago Bilinski</div>
+        <div class="team-role">Condução comercial e relacionamento</div>
+        <span class="tag tag-green" style="margin-top:8px">Account</span>
+      </div>
+      <div class="team-card reveal" style="--i:2">
+        <div class="team-icon">
+          <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </div>
+        <div class="team-name">Lucas Bilinski</div>
+        <div class="team-role">Contexto operacional</div>
+        <span class="tag tag-amber" style="margin-top:8px">Operacoes</span>
+      </div>
+      <div class="team-card reveal" style="--i:3">
+        <div class="team-icon" style="border-color:rgba(255,255,255,.15);background:rgba(255,255,255,.04)">
+          <svg viewBox="0 0 24 24" style="stroke:var(--gray)"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </div>
+        <div class="team-name" style="color:var(--gray)">A definir</div>
+        <div class="team-role">Estratégia é execução de redes sociais</div>
+        <span class="tag" style="margin-top:8px;background:rgba(255,255,255,.06);color:var(--gray);border:1px solid rgba(255,255,255,.1)">Em definição</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ============================================================ -->
+<!-- SECTION 13 - CTA + NEXT STEPS -->
+<!-- ============================================================ -->
+<section class="cta-section" style="padding:80px 0">
+  <div class="container reveal">
+    <h2>Em 60 dias, a OGROFIT sai do Mercado Livre para o mercado.</h2>
+
+    <div class="cta-visual" style="margin:32px 0">
+      <div class="cta-num"><span class="n">3</span><span class="l">Frentes</span></div>
+      <div class="cta-num"><span class="n">45-60</span><span class="l">Dias</span></div>
+      <div class="cta-num"><span class="n">R$40K</span><span class="l">Investimento</span></div>
+      <div class="cta-num"><span class="n">8%</span><span class="l">Revenue share</span></div>
+    </div>
+
+    <div class="steps-row">
+      <div class="step-item">
+        <div class="step-num">01</div>
+        <div class="step-text"><strong>Contrato</strong>Assinatura é alinhamento</div>
+      </div>
+      <div class="step-connector"></div>
+      <div class="step-item">
+        <div class="step-num">02</div>
+        <div class="step-text"><strong>Kick-off</strong>Em até 5 dias uteis</div>
+      </div>
+      <div class="step-connector"></div>
+      <div class="step-item">
+        <div class="step-num">03</div>
+        <div class="step-text"><strong>Operando</strong>45-60 dias para tudo no ar</div>
+      </div>
+    </div>
+
+    <p style="max-width:640px;margin:32px auto;font-style:italic;color:var(--gray)">"A OGROFIT já tem produto, estrutura é ambição. Agora precisa de estratégia para que o mercado veja o que vocês já sabem: essa marca nasceu para ser referência."</p>
+
+
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- FOOTER -->
+<!-- ============================================================ -->
+<footer class="footer">
+  <div class="container">
+    <p style="margin-bottom:8px">V4 Bilinski x OGROFIT — Proposta confidencial — 2026</p>
+    <p><a href="https://v4bilinski.github.io/saas-contabil/" target="_blank" rel="noopener">V4 Bilinski &amp; Co</a></p>
+  </div>
+</footer>
+
+<!-- ============================================================ -->
+<!-- JAVASCRIPT -->
+<!-- ============================================================ -->
+<script>
+// ========== SCROLL REVEAL ==========
+const revealElements = document.querySelectorAll('.reveal, .reveal-scale');
+const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) entry.target.classList.add('visible');
+  });
+}, observerOptions);
+revealElements.forEach(el => observer.observe(el));
+
+// ========== NAVIGATION ==========
+const nav = document.getElementById('nav');
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('navLinks');
+let lastScrollY = 0;
+
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('open');
+  navLinks.classList.toggle('open');
+});
+
+navLinks.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    hamburger.classList.remove('open');
+    navLinks.classList.remove('open');
+  });
+});
+
+window.addEventListener('scroll', () => {
+  const currentScrollY = window.scrollY;
+  if (currentScrollY > lastScrollY && currentScrollY > 100) {
+    nav.classList.add('hidden');
+  } else {
+    nav.classList.remove('hidden');
+  }
+  lastScrollY = currentScrollY;
+
+  const sections = document.querySelectorAll('section[id]');
+  sections.forEach(section => {
+    const top = section.offsetTop - 100;
+    const bottom = top + section.offsetHeight;
+    const link = navLinks.querySelector(`a[href="#${section.id}"]`);
+    if (link) {
+      if (currentScrollY >= top && currentScrollY < bottom) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
+    }
+  });
+}, { passive: true });
+
+// ========== SMOOTH SCROLL ==========
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+});
+
+// ========== ACCORDION ==========
+document.querySelectorAll('.accordion-trigger').forEach(trigger => {
+  trigger.addEventListener('click', () => {
+    const expanded = trigger.getAttribute('aria-expanded') === 'true';
+    trigger.setAttribute('aria-expanded', !expanded);
+    trigger.nextElementSibling.classList.toggle('open');
+  });
+});
+
+
+// ========== GANTT BAR ANIMATION ==========
+const ganttContainer = document.querySelector('.gantt-container');
+if (ganttContainer) {
+  const ganttObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.querySelectorAll('.gantt-bar').forEach(bar => {
+          bar.style.animationPlayState = 'running';
+        });
+      }
+    });
+  }, { threshold: 0.3 });
+  // Pause animations initially
+  ganttContainer.querySelectorAll('.gantt-bar').forEach(bar => {
+    bar.style.animationPlayState = 'paused';
+  });
+  ganttObserver.observe(ganttContainer);
+}
+</script>
+
+</body>
+</html>
