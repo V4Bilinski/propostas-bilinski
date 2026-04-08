@@ -383,13 +383,12 @@ tbody tr:last-child td{border-bottom:none}
   /* Timeline cards */
   .tl-panel{overflow-x:auto;-webkit-overflow-scrolling:touch;padding-bottom:8px;scrollbar-width:none}
   .tl-panel::-webkit-scrollbar{display:none}
-  .tl-panel>*{min-width:max-content}
-  .tl-cards{display:flex!important;gap:12px;grid-template-columns:none!important}
+  .tl-cards{display:flex!important;gap:12px;grid-template-columns:none!important;min-width:max-content}
   .tl-card{min-width:150px;max-width:170px;flex-shrink:0}
   .tl-card-title{min-height:auto;font-size:14px}
   .tl-card-desc{font-size:12px}
-  .tl-track{padding:0 4px}
-  .tl-footer{min-width:max-content;white-space:nowrap}
+  .tl-track{display:none}
+  .tl-footer{display:none}
 
   /* Gantt */
   .gantt-container{padding:16px;overflow-x:auto}
