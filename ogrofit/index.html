@@ -14,8 +14,8 @@
 html{scroll-behavior:smooth;font-size:16px;-webkit-text-size-adjust:100%}
 body{font-family:'Inter',sans-serif;background:#0A0A0A;color:#F0F0F0;line-height:1.6;overflow-x:hidden}
 img{max-width:100%;display:block}
-a{color:#CC0000;text-decoration:none;transition:color .2s}
-a:hover{color:#FF2020}
+a{color:var(--white);text-decoration:none;transition:color .2s}
+a:hover{color:var(--gray)}
 ::selection{background:rgba(204,0,0,.3);color:#fff}
 
 /* ========== CSS VARIABLES ========== */
@@ -43,7 +43,7 @@ a:hover{color:#FF2020}
 .text-green{color:var(--green)}
 .text-amber{color:var(--amber)}
 .tag{display:inline-block;padding:4px 12px;border-radius:9999px;font-size:11px;font-weight:600;letter-spacing:.05em;text-transform:uppercase}
-.tag-red{background:rgba(204,0,0,.15);color:#FF6666;border:1px solid rgba(204,0,0,.3)}
+.tag-red{background:rgba(255,255,255,.08);color:var(--white);border:1px solid rgba(255,255,255,.2)}
 .tag-green{background:rgba(34,197,94,.15);color:#4ADE80;border:1px solid rgba(34,197,94,.3)}
 .tag-amber{background:rgba(245,158,11,.15);color:#FCD34D;border:1px solid rgba(245,158,11,.3)}
 .tag-gold{background:rgba(212,175,55,.15);color:#D4AF37;border:1px solid rgba(212,175,55,.3)}
@@ -92,14 +92,14 @@ a:hover{color:#FF2020}
 .hero::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:radial-gradient(ellipse 80% 60% at 50% 40%,rgba(204,0,0,.08) 0%,transparent 70%)}
 .hero-grid{position:absolute;top:0;left:0;right:0;bottom:0;background-image:linear-gradient(rgba(255,255,255,.02) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.02) 1px,transparent 1px);background-size:60px 60px;opacity:.5}
 .hero-content{text-align:center;max-width:900px;position:relative;z-index:2}
-.hero-badge{display:inline-flex;align-items:center;gap:8px;padding:6px 16px;border-radius:9999px;background:rgba(204,0,0,.1);border:1px solid rgba(204,0,0,.3);font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#FF6666;margin-bottom:24px;animation:fadeIn 1s ease .2s both}
-.hero-badge::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--red);animation:pulse 2s infinite}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;padding:6px 16px;border-radius:9999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--white);margin-bottom:24px;animation:fadeIn 1s ease .2s both}
+.hero-badge::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--white);animation:pulse 2s infinite}
 .hero h1{font-family:var(--font-head);font-size:clamp(32px,6vw,64px);font-weight:800;letter-spacing:-.02em;line-height:1.1;color:var(--white);margin-bottom:20px;animation:fadeInUp .8s ease .4s both}
 .hero h1 span{background:linear-gradient(135deg,var(--red),var(--red-light));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;color:transparent}
 .hero-sub{font-size:clamp(16px,2.2vw,20px);color:var(--gray);max-width:700px;margin:0 auto 32px;line-height:1.7;animation:fadeInUp .8s ease .6s both}
 .hero-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:20px;margin-top:40px;animation:fadeInUp .8s ease .8s both}
 .hero-stat{text-align:center;padding:20px 12px;background:var(--surface);border:1px solid var(--surface-lt);border-radius:var(--radius-lg);transition:border-color .3s,box-shadow .3s}
-.hero-stat:hover{border-color:var(--red);box-shadow:var(--shadow-red)}
+.hero-stat:hover{border-color:rgba(255,255,255,.3);box-shadow:0 0 20px rgba(255,255,255,.1)}
 .hero-stat .num{font-family:var(--font-mono);font-size:28px;font-weight:700;color:var(--white);display:block}
 .hero-stat .label{font-size:12px;color:var(--gray);text-transform:uppercase;letter-spacing:.05em;margin-top:4px}
 .scroll-indicator{position:absolute;bottom:30px;left:50%;transform:translateX(-50%);display:none;flex-direction:column;align-items:center;gap:6px;animation:float 3s ease-in-out infinite;z-index:1;pointer-events:none}
@@ -117,14 +117,14 @@ a:hover{color:#FF2020}
 section{padding:80px 0;position:relative}
 section:nth-child(odd){background:var(--bg)}
 section:nth-child(even){background:var(--surface)}
-.section-label{display:inline-flex;align-items:center;gap:8px;font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--red);margin-bottom:12px}
-.section-label::before{content:'';width:24px;height:2px;background:var(--red)}
+.section-label{display:inline-flex;align-items:center;gap:8px;font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--white);margin-bottom:12px}
+.section-label::before{content:'';width:24px;height:2px;background:var(--white)}
 .section-title{font-family:var(--font-head);font-size:clamp(24px,4vw,40px);font-weight:700;letter-spacing:-.01em;color:var(--white);margin-bottom:16px;line-height:1.2}
 .section-desc{font-size:17px;color:var(--gray);max-width:700px;line-height:1.7;margin-bottom:40px}
 
 /* ========== CARDS ========== */
 .card{background:var(--surface);border:1px solid var(--surface-lt);border-radius:var(--radius-lg);padding:24px;transition:border-color .3s,box-shadow .3s,transform .3s}
-.card:hover{border-color:rgba(204,0,0,.4);box-shadow:0 0 12px rgba(204,0,0,.15);transform:translateY(-2px)}
+.card:hover{border-color:rgba(255,255,255,.2);box-shadow:0 0 12px rgba(255,255,255,.08);transform:translateY(-2px)}
 .card-header{display:flex;align-items:center;gap:12px;margin-bottom:16px}
 .card-icon{width:40px;height:40px;border-radius:var(--radius);background:rgba(204,0,0,.1);display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .card-icon svg{width:20px;height:20px;stroke:var(--red);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
@@ -140,7 +140,7 @@ section:nth-child(even){background:var(--surface)}
 /* ========== EXEC BOXES ========== */
 .exec-highlight{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;margin-top:32px}
 .exec-box{background:var(--surface-md);border:1px solid var(--surface-lt);border-radius:var(--radius-lg);padding:24px;position:relative;overflow:hidden}
-.exec-box::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;background:var(--red)}
+.exec-box::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;background:var(--white)}
 .exec-box h3{font-family:var(--font-head);font-size:16px;font-weight:600;color:var(--white);margin-bottom:12px}
 .exec-box p{font-size:14px;color:var(--gray);line-height:1.7}
 
@@ -163,8 +163,8 @@ section:nth-child(even){background:var(--surface)}
 .advisor-title{font-size:13px;color:rgba(255,255,255,.7);margin-top:2px}
 
 /* ========== QUOTE BLOCK (NEW) ========== */
-.quote-block{background:var(--surface-md);border-left:3px solid var(--red);border-radius:0 var(--radius) var(--radius) 0;padding:16px 20px;margin-top:32px;position:relative;max-width:700px}
-.quote-block::before{content:'\201C';position:absolute;top:4px;left:8px;font-size:28px;color:rgba(204,0,0,.25);font-family:Georgia,serif;line-height:1}
+.quote-block{background:var(--surface-md);border-left:3px solid var(--white);border-radius:0 var(--radius) var(--radius) 0;padding:16px 20px;margin-top:32px;position:relative;max-width:700px}
+.quote-block::before{content:'\201C';position:absolute;top:4px;left:8px;font-size:28px;color:rgba(255,255,255,.25);font-family:Georgia,serif;line-height:1}
 .quote-block p{font-size:15px;color:var(--gray);line-height:1.6;font-style:italic;padding-left:16px}
 .quote-block cite{display:block;font-size:12px;color:var(--gray-md);font-style:normal;margin-top:8px;padding-left:16px}
 
@@ -179,7 +179,7 @@ section:nth-child(even){background:var(--surface)}
 /* ========== SYSTEM CARDS (NEW) ========== */
 .system-card{background:var(--surface);border:1px solid var(--surface-lt);border-radius:var(--radius-lg);padding:0;overflow:hidden;transition:border-color .3s,transform .3s,box-shadow .3s}
 .system-card:hover{transform:translateY(-3px)}
-.system-card--red:hover{border-color:rgba(204,0,0,.4);box-shadow:0 0 14px rgba(204,0,0,.15)}
+.system-card--red{background:var(--surface)!important}.system-card--red:hover{border-color:rgba(204,0,0,.4);box-shadow:0 0 14px rgba(204,0,0,.15)}
 .system-card--emerald:hover{border-color:rgba(34,197,94,.4);box-shadow:0 0 14px rgba(34,197,94,.15)}
 .system-card--gold:hover{border-color:rgba(212,175,55,.4);box-shadow:0 0 14px rgba(212,175,55,.15)}
 .system-top{height:4px}
@@ -207,7 +207,7 @@ section:nth-child(even){background:var(--surface)}
 .accordion-trigger[aria-expanded="true"] .chevron{transform:rotate(180deg)}
 .accordion-content{max-height:0;overflow:hidden;transition:max-height .5s ease,opacity .3s ease;opacity:0;background:var(--surface-md)}
 .accordion-content.open{max-height:4000px;opacity:1}
-.week-dot{width:10px;height:10px;border-radius:50%;background:var(--red);flex-shrink:0}
+.week-dot{width:10px;height:10px;border-radius:50%;background:var(--white);flex-shrink:0}
 .week-dot--emerald{background:var(--green)}
 .week-dot--gold{background:var(--gold)}
 .week-count{font-size:13px;color:var(--gray);font-weight:400;font-family:var(--font-body)}
@@ -299,7 +299,7 @@ tbody tr:last-child td{border-bottom:none}
 /* ========== STEPS ROW (NEW) ========== */
 .steps-row{display:flex;justify-content:center;gap:40px;margin:40px 0;flex-wrap:wrap}
 .step-item{display:flex;align-items:center;gap:16px;text-align:left}
-.step-num{font-family:var(--font-mono);font-size:24px;font-weight:700;color:var(--red);flex-shrink:0}
+.step-num{font-family:var(--font-mono);font-size:24px;font-weight:700;color:var(--white);flex-shrink:0}
 .step-text{font-size:14px;color:var(--gray-lt);line-height:1.4}
 .step-text strong{color:var(--white);display:block;font-family:var(--font-head)}
 .step-connector{width:40px;height:2px;background:var(--surface-lt);flex-shrink:0}
@@ -316,10 +316,10 @@ tbody tr:last-child td{border-bottom:none}
 .btn-primary{background:var(--red);color:#fff}
 .btn-primary:hover{background:var(--red-light);box-shadow:var(--shadow-red);color:#fff}
 .btn-outline{background:transparent;color:var(--white);border:1px solid var(--surface-lt)}
-.btn-outline:hover{border-color:var(--red);color:var(--red)}
+.btn-outline:hover{border-color:var(--white);color:var(--white)}
 
 /* ========== SECTION DIVIDER ========== */
-.section-divider{width:100%;height:1px;background:linear-gradient(90deg,transparent,rgba(204,0,0,.3),transparent);margin:0;border:none}
+.section-divider{width:100%;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.1),transparent);margin:0;border:none}
 
 /* ========== FOOTER ========== */
 .footer{padding:24px 0;background:var(--bg);border-top:1px solid var(--surface-lt);text-align:center}
@@ -466,7 +466,7 @@ tbody tr:last-child td{border-bottom:none}
 .tl-card--emerald:hover{border-color:rgba(34,197,94,.5);box-shadow:0 8px 32px rgba(34,197,94,.15)}
 .tl-card--gold{background:linear-gradient(145deg,rgba(212,175,55,.15),rgba(212,175,55,.05));border-color:rgba(212,175,55,.25)}
 .tl-card--gold:hover{border-color:rgba(212,175,55,.5);box-shadow:0 8px 32px rgba(212,175,55,.15)}
-.tl-card-label{font-family:var(--font-head);font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--red);margin-bottom:12px}
+.tl-card-label{font-family:var(--font-head);font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--white);margin-bottom:12px}
 .tl-card--emerald .tl-card-label{color:var(--green)}
 .tl-card--gold .tl-card-label{color:var(--gold)}
 .tl-card-title{font-family:var(--font-head);font-size:15px;font-weight:700;color:var(--white);line-height:1.35;margin-bottom:10px;min-height:42px}
@@ -682,7 +682,7 @@ tbody tr:last-child td{border-bottom:none}
   <div class="container">
     <div class="reveal">
       <span class="section-label">Diagnóstico</span>
-      <h2 class="section-title">Vocês já têm tudo. Só falta a <span style="color:var(--red)">direção estratégica</span>.</h2>
+      <h2 class="section-title">Vocês já têm tudo. Só falta a <span style="color:var(--white);font-weight:800">direção estratégica</span>.</h2>
       <p class="section-desc">A OGROFIT não precisa de ajuda para vender — vocês já faturam R$8M+/mês. Precisam de estratégia para que o mercado veja o que vocês já sabem: essa marca nasceu para ser referência.</p>
     </div>
     <div class="grid-2 stagger">
@@ -711,12 +711,12 @@ tbody tr:last-child td{border-bottom:none}
           <h3>O que falta construir</h3>
         </div>
         <ul style="list-style:none;display:flex;flex-direction:column;gap:10px">
-          <li style="font-size:14px;color:var(--gray);line-height:1.6;padding-left:16px;position:relative"><span style="position:absolute;left:0;color:var(--red)">&#8226;</span>Estratégia de marca é posicionamento</li>
-          <li style="font-size:14px;color:var(--gray);line-height:1.6;padding-left:16px;position:relative"><span style="position:absolute;left:0;color:var(--red)">&#8226;</span>Trafego pago para branding</li>
-          <li style="font-size:14px;color:var(--gray);line-height:1.6;padding-left:16px;position:relative"><span style="position:absolute;left:0;color:var(--red)">&#8226;</span>Presença digital estratégica além do ML</li>
-          <li style="font-size:14px;color:var(--gray);line-height:1.6;padding-left:16px;position:relative"><span style="position:absolute;left:0;color:var(--red)">&#8226;</span>Canal de vendas próprio (e-commerce)</li>
-          <li style="font-size:14px;color:var(--gray);line-height:1.6;padding-left:16px;position:relative"><span style="position:absolute;left:0;color:var(--red)">&#8226;</span>Direção é priorização (roadmap)</li>
-          <li style="font-size:14px;color:var(--gray);line-height:1.6;padding-left:16px;position:relative"><span style="position:absolute;left:0;color:var(--red)">&#8226;</span>Estratégia de conteúdo omnichannel</li>
+          <li style="font-size:14px;color:var(--gray);line-height:1.6;padding-left:16px;position:relative"><span style="position:absolute;left:0;color:var(--white)">&#8226;</span>Estratégia de marca é posicionamento</li>
+          <li style="font-size:14px;color:var(--gray);line-height:1.6;padding-left:16px;position:relative"><span style="position:absolute;left:0;color:var(--white)">&#8226;</span>Trafego pago para branding</li>
+          <li style="font-size:14px;color:var(--gray);line-height:1.6;padding-left:16px;position:relative"><span style="position:absolute;left:0;color:var(--white)">&#8226;</span>Presença digital estratégica além do ML</li>
+          <li style="font-size:14px;color:var(--gray);line-height:1.6;padding-left:16px;position:relative"><span style="position:absolute;left:0;color:var(--white)">&#8226;</span>Canal de vendas próprio (e-commerce)</li>
+          <li style="font-size:14px;color:var(--gray);line-height:1.6;padding-left:16px;position:relative"><span style="position:absolute;left:0;color:var(--white)">&#8226;</span>Direção é priorização (roadmap)</li>
+          <li style="font-size:14px;color:var(--gray);line-height:1.6;padding-left:16px;position:relative"><span style="position:absolute;left:0;color:var(--white)">&#8226;</span>Estratégia de conteúdo omnichannel</li>
         </ul>
       </div>
     </div>
@@ -738,23 +738,23 @@ tbody tr:last-child td{border-bottom:none}
     <div class="eco-layout">
       <div class="eco-text reveal">
         <span class="section-label">Visão de futuro</span>
-        <h2 class="eco-title">Um ecossistema fitness <span style="color:var(--red)">completo</span></h2>
+        <h2 class="eco-title">Um ecossistema fitness <span style="color:var(--white);font-weight:800">completo</span></h2>
         <p class="eco-desc">De têxtil a suplementação, de máquinas a alimentação. 4 fases de expansão para construir um império de marca no universo fitness.</p>
         <div style="display:flex;flex-direction:column;gap:16px;margin-top:32px">
           <div class="exec-box" style="padding:16px 20px">
-            <h3 style="font-size:14px;margin-bottom:4px"><span style="color:var(--red);font-family:var(--font-mono);margin-right:8px">01</span> Roupa fitness (têxtil)</h3>
+            <h3 style="font-size:14px;margin-bottom:4px"><span style="color:var(--white);font-family:var(--font-mono);margin-right:8px">01</span> Roupa fitness (têxtil)</h3>
             <p style="font-size:13px;margin:0">Ponto de partida — fabricação via Polofit</p>
           </div>
           <div class="exec-box" style="padding:16px 20px">
-            <h3 style="font-size:14px;margin-bottom:4px"><span style="color:var(--red);font-family:var(--font-mono);margin-right:8px">02</span> Suplementação</h3>
+            <h3 style="font-size:14px;margin-bottom:4px"><span style="color:var(--white);font-family:var(--font-mono);margin-right:8px">02</span> Suplementação</h3>
             <p style="font-size:13px;margin:0">Em negociação — conexão com Shark Pro</p>
           </div>
           <div class="exec-box" style="padding:16px 20px">
-            <h3 style="font-size:14px;margin-bottom:4px"><span style="color:var(--red);font-family:var(--font-mono);margin-right:8px">03</span> Máquinas de academia</h3>
+            <h3 style="font-size:14px;margin-bottom:4px"><span style="color:var(--white);font-family:var(--font-mono);margin-right:8px">03</span> Máquinas de academia</h3>
             <p style="font-size:13px;margin:0">Pipeline — parceria com top 5 do Brasil</p>
           </div>
           <div class="exec-box" style="padding:16px 20px">
-            <h3 style="font-size:14px;margin-bottom:4px"><span style="color:var(--red);font-family:var(--font-mono);margin-right:8px">04</span> Fit barrinha</h3>
+            <h3 style="font-size:14px;margin-bottom:4px"><span style="color:var(--white);font-family:var(--font-mono);margin-right:8px">04</span> Fit barrinha</h3>
             <p style="font-size:13px;margin:0">Expansão futura</p>
           </div>
         </div>
@@ -1453,7 +1453,7 @@ tbody tr:last-child td{border-bottom:none}
         <div class="gantt-header">S8</div>
 
         <!-- Row 1: Estratégia -->
-        <div class="gantt-label"><span style="color:var(--red)">&#9679;</span> Estruturação estratégica</div>
+        <div class="gantt-label"><span style="color:var(--white)">&#9679;</span> Estruturação estratégica</div>
         <div class="gantt-cell" style="grid-column:2/7">
           <div class="gantt-bar gantt-bar--red">5 semanas</div>
         </div>
@@ -1483,7 +1483,7 @@ tbody tr:last-child td{border-bottom:none}
 
     <div class="exec-highlight reveal" style="margin-top:32px">
       <div class="exec-box">
-        <h3 style="color:var(--red)">Ao final da frente 01</h3>
+        <h3 style="color:var(--white)">Ao final da frente 01</h3>
         <p>Roadmap completo, go-to-market validado é forecast de mídia para 3 meses.</p>
       </div>
       <div class="exec-box">
